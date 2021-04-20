@@ -1,14 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 body{
-font-family: 'Source Sans Pro', sans-serif; 
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #fff;
-    min-height: 100vh;
-    background-position: 0px -30vh;
-    background-repeat: no-repeat;
-    background-image: radial-gradient(50% 50% at 50% 50%, rgb(39 141 255 / 14%) 0%, rgba(255, 255, 255, 0) 100%);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #fff;
+  min-height: 100vh;
+  background-position: 0px -30vh;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(50% 50% at 50% 50%, rgb(39 141 255 / 14%) 0%, rgba(255, 255, 255, 0) 100%);
 }
 /*header*/
 .header {
@@ -17,7 +16,7 @@ font-family: 'Source Sans Pro', sans-serif;
   margin-bottom: 70px;
 }
 img.logo {
-    width: 35px;
+    width: 55px;
 }
 button.tablinks.active {
     font-size: 16px;
@@ -234,6 +233,26 @@ nav a#pull {
     padding: 5px;
     line-height: 0;
 }
+
+.navbar-brand-logo {
+  color: rgb(0, 0, 0);
+  margin-left: 60px;
+  margin-top: 17px;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.connect-wallet-appbar {
+  padding: 0.8rem;
+  font-weight: 600;
+  margin-top: 34px;
+  font-size: 17px;
+  border-radius: 12px;
+  float: right;
+  background-color: rgb(39 141 255 / 14%);
+  border: 1px solid rgb(253, 234, 241);
+  color: rgb(0,191,255);
+}
 /* Breakpoint of 600px */
 
 @media screen and (max-width: 600px) {
@@ -248,7 +267,7 @@ nav a#pull {
   nav li {
     width: 100%;
     float: left;
-    position; relative;
+    position: relative;
   }
   nav li a {
      padding: 10px;
@@ -290,7 +309,8 @@ nav a#pull {
 
 @media (min-width: 768px){
 .header ul.clearfix {
-    padding: 22px;
+  margin-top: 12px;
+  padding: 22px;
 }
 }
   
