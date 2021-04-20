@@ -251,7 +251,13 @@ nav a#pull {
   float: right;
   background-color: rgb(39 141 255 / 14%);
   border: 1px solid rgb(253, 234, 241);
-  color: rgb(0,191,255);
+  color: rgb(30,144,255);
+  outline: 0;
+}
+
+.connect-wallet-appbar:focus, .connect-wallet-appbar:active:focus {
+  outline: 0;
+  color: rgb(30,144,255);
 }
 /* Breakpoint of 600px */
 
