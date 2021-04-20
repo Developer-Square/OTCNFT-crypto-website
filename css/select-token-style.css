@@ -251,6 +251,6 @@ button {
 }
 @media (min-width: 321px) and (max-width: 475px) {
 .swap-purchase-form{
-    max-width:300px;
+    max-width:400px;
 }
 }
