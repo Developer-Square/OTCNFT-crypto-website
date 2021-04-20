@@ -1,0 +1,1166 @@
+@media (max-width: 1349px) and (min-width: 1200px) {
+    .header-banner {
+        background-position: 64% 100%;
+    }
+    .erim-left-content{
+        width: 90%;
+    }
+
+}
+@media (max-width: 1199px) and (min-width: 1024px) {
+    .header-banner {
+        background-position: 90% 100%;
+    }
+    .header-banner-content p {
+        text-align: left;
+        width: 85%;
+    }
+    .erim-left-content{
+        width: 73%;
+    }
+    .aractic-right-content::before {
+        display: none;
+    }
+    .aractic-right-content h4 {
+        font-size: 32px;
+    }
+    .aractic-right-content {
+        padding: 40px 30px 20px 60px;
+    }
+    .aractic-right-content p {
+        margin: 0 0 15px;
+    }
+   
+    .research-girl-img img{
+        width: 75%;
+    float: right;
+    }
+    .research-girl-img {
+        bottom: 0;
+        top: auto;
+    }
+    .tea-box{
+        width: 29%;
+    }
+    .tea-third-row .tea-box:nth-child(2):before {
+        right: -209px;
+        top: -319px;
+        width: 536px;
+        transform: rotate(-76deg);
+    }
+    .tea-third-row .tea-box:nth-child(2):after {
+        right: 113px;
+        top: -73px;
+    }
+    .tea-third-row .tea-box:nth-child(3):before {
+        right: -55px;
+        top: -338px;
+        width: 579px;
+        transform: rotate(-105deg);
+    }
+    .tea-third-row .tea-box:nth-child(3):after {
+        left: 115px;
+        top: -64px;
+    }
+    .deal-body img{
+        width: 88%;
+    }
+    .deal-body h5 {
+        font-size: 22px;
+    }
+    .deal-main-content {
+        /*min-height: 885px;*/
+    }
+    .proof-bottom-img {
+        right: 0px;
+        bottom: -120px;
+    }
+}
+@media (max-width: 1023px) and (min-width: 992px) {
+
+    .header-banner {
+        background-position: 90% 100%;
+    }
+    .header-banner-content p {
+        text-align: left;
+        width: 85%;
+    }
+    .erim-left-content{
+        width: 73%;
+    }
+    .aractic-right-content::before {
+        display: none;
+    }
+    .aractic-right-content h4 {
+        font-size: 32px;
+    }
+    .aractic-right-content {
+        padding: 40px 30px 20px 60px;
+    }
+    .aractic-right-content p {
+        margin: 0 0 15px;
+    }
+   
+    .research-girl-img img{
+        width: 75%;
+    float: right;
+    }
+    .research-girl-img {
+        bottom: 0;
+        top: auto;
+    }
+    .tea-box{
+        width: 29%;
+    }
+    .tea-third-row .tea-box:nth-child(2):before {
+        right: -209px;
+        top: -319px;
+        width: 536px;
+        transform: rotate(-76deg);
+    }
+    .tea-third-row .tea-box:nth-child(2):after {
+        right: 113px;
+        top: -73px;
+    }
+    .tea-third-row .tea-box:nth-child(3):before {
+        right: -55px;
+        top: -338px;
+        width: 579px;
+        transform: rotate(-105deg);
+    }
+    .tea-third-row .tea-box:nth-child(3):after {
+        left: 115px;
+        top: -64px;
+    }
+    .deal-body img{
+        width: 88%;
+    }
+    .deal-body h5 {
+        font-size: 22px;
+    }
+    .deal-main-content{
+        /*min-height: 860px;*/
+    }
+
+}
+@media (max-width: 991px) and (min-width: 768px) {
+
+    .header-banner {
+        background-position: 90% 100%;
+    }
+    .erim-man-img {
+        width: 320px;
+    }
+    .erim-left-content{
+        width: 90%;
+    }
+    .header-banner-content p {
+        text-align: left;
+        width: 70%;
+    }
+    .header-banner-content h3 {
+        margin: 60px 0 60px;
+    }
+    .aractic-right-content::before {
+        display: none;
+    }
+    .aractic-right-content h4 {
+        font-size: 32px;
+    }
+    .aractic-right-content {
+        padding: 40px 30px 20px 60px;
+    }
+    .aractic-right-content p {
+        margin: 0 0 15px;
+    }
+    .research-girl-img {
+        display: none;
+    }
+    .research-row-data .col-sm-8{
+        width: 100%;
+    }
+    .research-por-content h2,
+    .what-other-heading h3 {
+        width: 100%;
+    }
+
+    .tea-box {
+        width: 100% !important;
+    }
+    .tea-second-row .tea-box:first-child:before,
+    .tea-second-row .tea-box:last-child:before,
+    .tea-third-row .tea-box:nth-child(2):before,
+    .tea-third-row .tea-box:nth-child(3):before {
+        right: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        left: 0;
+    }
+    .tea-cup-main {
+        margin: 50px auto 0 auto;
+    }
+    .tea-box:last-child {
+        margin-top: 100px;
+    }
+    .tea-third-row .tea-box:nth-child(2) {
+        margin-top: -190px;
+    }
+    .tea-third-row .tea-box:nth-child(2), .tea-third-row .tea-box:nth-child(3) {
+        width: 100%;
+    }
+    .tea-box-2:after,
+    .tea-box:after {
+        width: 0;
+        height: 0;
+        left: 0;
+        top: 0;
+        right: 0;
+    }
+    .tea-third-row .tea-box:nth-child(3){
+        margin-top: 100px;
+    }
+    .tea-second-row {
+        margin-top: 45px;
+    }
+    .tea-third-row .tea-box:last-child{
+        display: none;
+    }
+    .tea-main-cup img{
+        margin: 0 auto;
+    }
+    .want-col-data img {
+        margin: 16px auto;
+    }
+    .want-col-data p {
+        font-size: 18px;
+    }
+    .want-col-data h6 {
+        line-height: 25px;
+        font-size: 18px;
+    }
+    .want-col-data {
+        min-height: 480px;
+    }
+    .deal-head h3 {
+        font-size: 22px;
+    }
+    .deal-body h6 {
+        font-size: 34px;
+    }
+    .deal-body h5 {
+        font-size: 16px;
+    }
+    .deal-body img{
+        width: 85%;
+    }
+    .best-package {
+        top: 0;
+    }
+    .deal-body-title {
+    min-height: 75px;
+	}
+	.bottle-img {
+    min-height: 200px;
+    max-height: 200px;
+	}
+}
+@media (max-width: 767px) and (min-width: 685px) {
+
+    .header-banner-content h3 {
+        font-size: 31px;
+        margin: 35px 0 25px;
+    }
+    .header-banner-content p {
+        font-size: 26px;
+        margin: 0px 0 175px;
+    }
+    .erim-left-content p {
+        font-size: 20px;
+    }
+    .erim-man-img {
+        display: none;
+    }
+    .aractic-right-content h4 {
+        font-size: 35px;
+    }
+    .aractic-right-content {
+        padding: 50px 5px;
+    }
+    .arctic-root {
+        background-image: none;
+        background-color: #69b1cc;
+    }
+    .one-way-content h3 {
+        font-size: 35px;
+        margin: 0 0 25px;
+    }
+    .one-way-content {
+        padding: 45px 0 50px;
+    }
+    .one-way-content p, .research-col-content p {
+        font-size: 20px;
+    }
+    .way-second-row .way-col-content{
+        margin-top: 35px;
+    }
+    .research-por-content h2 {
+        font-size: 28px;
+        margin: 0 auto 30px auto;
+    }
+    .what-other-heading h3 {
+        font-size: 24px;
+        width: 100%;
+        line-height: 32px;
+        margin: 0 auto 30px auto;
+    }
+    .what-other-content {
+        padding: 40px 0;
+    }
+    .what-other-heading p {
+        font-size: 20px;
+    }
+    .tea-box {
+        width: 100% !important;
+    }
+    .tea-second-row .tea-box:first-child:before,
+    .tea-second-row .tea-box:last-child:before,
+    .tea-third-row .tea-box:nth-child(2):before,
+    .tea-third-row .tea-box:nth-child(3):before {
+        right: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        left: 0;
+    }
+    .tea-cup-main {
+        margin: 50px auto 0 auto;
+    }
+    .tea-box:last-child {
+        margin-top: 100px;
+    }
+    .tea-third-row .tea-box:nth-child(2) {
+        margin-top: -190px;
+    }
+    .tea-third-row .tea-box:nth-child(2), .tea-third-row .tea-box:nth-child(3) {
+        width: 100%;
+    }
+    .tea-box-2:after,
+    .tea-box:after {
+        width: 0;
+        height: 0;
+        left: 0;
+        top: 0;
+        right: 0;
+    }
+    .tea-third-row .tea-box:nth-child(3){
+        margin-top: 100px;
+    }
+    .tea-second-row {
+        margin-top: 45px;
+    }
+    .tea-third-row .tea-box:last-child{
+        display: none;
+    }
+    .header-banner {
+        background-position: 78% 100%;
+    }
+    .research-girl-img {
+        display: none;
+    }
+    .tea-box-content p, .want-proof-content p {
+        font-size: 20px;
+        margin: 0 0 25px;
+    }
+    .weight-loss-row {
+        margin-top: 22px;
+    }
+    .want-proof-content h3 {
+        font-size: 35px;
+        margin: 0 0 25px;
+    }
+    .want-proof-content img {
+        margin-bottom: 25px;
+    }
+    .want-col-data p {
+        font-size: 20px;
+    }
+    .want-col-data {
+        margin-bottom: 120px;
+    }
+    .want-col-data h6 {
+        line-height: 24px;
+        font-size: 18px;
+    }
+    .want-row-data {
+        padding-bottom: 15px;
+    }
+    .try-luma-content h3 {
+        font-size: 30px;
+        margin: 0 0 30px;
+    }
+    .try-luma {
+        padding: 50px 0;
+    }
+    .try-luma-content p {
+        font-size: 18px;
+        margin: 0 0 25px;
+    }
+    .hours{
+        line-height: 45px;
+    }
+    .deal-main-content {
+        margin-bottom: 30px;
+    }
+    .deal-head h3 {
+        font-size: 24px;
+    }
+    .deal-body a {
+        margin-bottom: 15px;
+        margin-top: 15px;
+        padding: 0 25px;
+        display: inline-block;
+        float: none;
+    }
+    .deal-body img{
+        width: 50%;
+    }
+    .deal-body h5 {
+        font-size: 20px;
+    }
+    .deal-main-content {
+        min-height: auto;
+    }
+    .deal-body h6 {
+        font-size: 26px;
+    }
+    .luma-deals {
+        margin: 0;
+    }
+    .way-col-img {
+        margin-bottom: 25px !important;
+    }
+    .luma-perfect {
+        padding: 25px 0;
+    }
+    .luma-faq .faq-qus h5 {
+        font-size: 25px;
+    }
+    .luma-ans p {
+        font-size: 20px;
+    }
+    .luma-faq {
+        margin-bottom: 30px;
+    }
+    .bottom-packg-head h2 {
+        font-size: 28px;
+    }
+    .eric-footer {
+        padding: 40px 0;
+    }
+    .plant-icon {
+        transform: translate(-50%, 36%);
+    }
+    .way-col-img{
+        width: 55%;
+        margin: 0 auto;
+    }
+    .tea-main-cup img{
+        margin: 0 auto;
+    }
+    .tea-main-cup{
+        width: 60%;
+    margin: 0 auto;
+    }
+    .want-col-data {
+        min-height: 300px;
+    }
+    .best-package {
+        top: 0;
+    }
+
+}
+@media (max-width: 684px) and (min-width: 568px) {
+
+    .header-banner-content h3 {
+        font-size: 31px;
+        margin: 35px 0 25px;
+    }
+    .header-banner-content p {
+        font-size: 26px;
+        margin: 0px 0 175px;
+    }
+    .erim-left-content p {
+        font-size: 20px;
+    }
+    .erim-man-img {
+        display: none;
+    }
+    .aractic-right-content h4 {
+        font-size: 30px;
+    }
+    .aractic-right-content {
+        padding: 50px 5px;
+    }
+    .arctic-root {
+        background-image: none;
+        background-color: #69b1cc;
+    }
+    .one-way-content h3 {
+        font-size: 35px;
+        margin: 0 0 25px;
+    }
+    .one-way-content {
+        padding: 45px 0 50px;
+    }
+    .one-way-content p, .research-col-content p {
+        font-size: 20px;
+    }
+    .way-second-row .way-col-content{
+        margin-top: 35px;
+    }
+    .research-por-content h2 {
+        font-size: 28px;
+        margin: 0 auto 30px auto;
+    }
+    .what-other-heading h3 {
+        font-size: 24px;
+        width: 100%;
+        line-height: 32px;
+        margin: 0 auto 30px auto;
+    }
+    .what-other-content {
+        padding: 40px 0;
+    }
+    .what-other-heading p {
+        font-size: 20px;
+    }
+    .tea-box {
+        width: 100% !important;
+    }
+    .tea-second-row .tea-box:first-child:before,
+    .tea-second-row .tea-box:last-child:before,
+    .tea-third-row .tea-box:nth-child(2):before,
+    .tea-third-row .tea-box:nth-child(3):before {
+        right: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        left: 0;
+    }
+    .tea-cup-main {
+        margin: 50px auto 0 auto;
+    }
+    .tea-box:last-child {
+        margin-top: 100px;
+    }
+    .tea-third-row .tea-box:nth-child(2) {
+        margin-top: -190px;
+    }
+    .tea-third-row .tea-box:nth-child(2), .tea-third-row .tea-box:nth-child(3) {
+        width: 100%;
+    }
+    .tea-box-2:after,
+    .tea-box:after {
+        width: 0;
+        height: 0;
+        left: 0;
+        top: 0;
+        right: 0;
+    }
+    .tea-third-row .tea-box:nth-child(3){
+        margin-top: 100px;
+    }
+    .tea-second-row {
+        margin-top: 45px;
+    }
+    .tea-third-row .tea-box:last-child{
+        display: none;
+    }
+    .header-banner {
+        background-position: 70% 100%;
+    }
+    .research-girl-img {
+        display: none;
+    }
+    .tea-box-content p, .want-proof-content p {
+        font-size: 20px;
+        margin: 0 0 25px;
+    }
+    .weight-loss-row {
+        margin-top: 22px;
+    }
+    .want-proof-content h3 {
+        font-size: 35px;
+        margin: 0 0 25px;
+    }
+    .want-proof-content img {
+        margin-bottom: 25px;
+    }
+    .want-col-data p {
+        font-size: 20px;
+    }
+    .want-col-data {
+        margin-bottom: 120px;
+    }
+    .want-col-data h6 {
+        line-height: 24px;
+        font-size: 18px;
+    }
+    .want-row-data {
+        padding-bottom: 15px;
+    }
+    .try-luma-content h3 {
+        font-size: 30px;
+        margin: 0 0 30px;
+    }
+    .try-luma {
+        padding: 50px 0;
+    }
+    .try-luma-content p {
+        font-size: 18px;
+        margin: 0 0 25px;
+    }
+    .hours{
+        line-height: 45px;
+    }
+    .deal-main-content {
+        margin-bottom: 30px;
+    }
+    .deal-head h3 {
+        font-size: 24px;
+    }
+    .deal-body a {
+        margin-bottom: 15px;
+        margin-top: 15px;
+        padding: 0 25px;
+        display: inline-block;
+        float: none;
+    }
+    .deal-body img{
+        width: 65%;
+    }
+    .deal-body h5 {
+        font-size: 20px;
+    }
+    .deal-main-content {
+        min-height: auto;
+    }
+    .deal-body h6 {
+        font-size: 26px;
+    }
+    .luma-deals {
+        margin: 0;
+    }
+    .way-col-img {
+        margin-bottom: 25px !important;
+    }
+    .luma-perfect {
+        padding: 25px 0;
+    }
+    .luma-faq .faq-qus h5 {
+        font-size: 25px;
+    }
+    .luma-ans p {
+        font-size: 20px;
+    }
+    .luma-faq {
+        margin-bottom: 30px;
+    }
+    .bottom-packg-head h2 {
+        font-size: 28px;
+    }
+    .eric-footer {
+        padding: 40px 0;
+    }
+    .plant-icon {
+        transform: translate(-50%, 36%);
+    }
+    .way-col-img{
+        width: 65%;
+        margin: 0 auto;
+    }
+    .tea-main-cup img{
+        margin: 0 auto;
+    }
+    .tea-main-cup{
+        width: 60%;
+    margin: 0 auto;
+    }
+    .want-col-data {
+        min-height: 300px;
+    }
+    .best-package {
+        top: 0;
+    }
+
+}
+@media (max-width: 567px) and (min-width: 480px) {
+
+    .header-banner-content h3 {
+        font-size: 24px;
+        margin: 35px 0 25px;
+    }
+    .header-banner-content p {
+        font-size: 22px;
+        margin: 0px 0 175px;
+    }
+    .erim-left-content p {
+        font-size: 18px;
+    }
+    .erim-man-img {
+        display: none;
+    }
+    .aractic-right-content h4 {
+        font-size: 25px;
+    }
+    .aractic-right-content {
+        padding: 50px 5px;
+    }
+    .arctic-root {
+        background-image: none;
+        background-color: #69b1cc;
+    }
+    .one-way-content h3 {
+        font-size: 30px;
+        margin: 0 0 25px;
+    }
+    .one-way-content {
+        padding: 45px 0 50px;
+    }
+    .one-way-content p, .research-col-content p {
+        font-size: 18px;
+    }
+    .way-second-row .way-col-content{
+        margin-top: 35px;
+    }
+    .research-por-content h2 {
+        font-size: 24px;
+        margin: 0 auto 30px auto;
+    }
+    .what-other-heading h3 {
+        font-size: 21px;
+        width: 100%;
+        line-height: 32px;
+        margin: 0 auto 30px auto;
+    }
+    .what-other-content {
+        padding: 40px 0;
+    }
+    .what-other-heading p {
+        font-size: 18px;
+    }
+    .tea-box {
+        width: 100% !important;
+    }
+    .tea-second-row .tea-box:first-child:before,
+    .tea-second-row .tea-box:last-child:before,
+    .tea-third-row .tea-box:nth-child(2):before,
+    .tea-third-row .tea-box:nth-child(3):before {
+        right: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        left: 0;
+    }
+    .tea-cup-main {
+        margin: 50px auto 0 auto;
+    }
+    .tea-box:last-child {
+        margin-top: 100px;
+    }
+    .tea-third-row .tea-box:nth-child(2) {
+        margin-top: -190px;
+    }
+    .tea-third-row .tea-box:nth-child(2), .tea-third-row .tea-box:nth-child(3) {
+        width: 100%;
+    }
+    .tea-box-2:after,
+    .tea-box:after {
+        width: 0;
+        height: 0;
+        left: 0;
+        top: 0;
+        right: 0;
+    }
+    .tea-third-row .tea-box:nth-child(3){
+        margin-top: 100px;
+    }
+    .tea-second-row {
+        margin-top: 45px;
+    }
+    .tea-third-row .tea-box:last-child{
+        display: none;
+    }
+    .header-banner {
+        background-position: 70% 100%;
+    }
+    .research-girl-img {
+        display: none;
+    }
+    .tea-box-content p, .want-proof-content p {
+        font-size: 18px;
+        margin: 0 0 25px;
+    }
+    .weight-loss-row {
+        margin-top: 22px;
+    }
+    .want-proof-content h3 {
+        font-size: 35px;
+        margin: 0 0 25px;
+    }
+    .want-proof-content img {
+        margin-bottom: 25px;
+    }
+    .want-col-data p {
+        font-size: 18px;
+    }
+    .want-col-data {
+        margin-bottom: 120px;
+    }
+    .want-col-data h6 {
+        line-height: 24px;
+        font-size: 16px;
+    }
+    .want-row-data {
+        padding-bottom: 15px;
+    }
+    .try-luma-content h3 {
+        font-size: 30px;
+        margin: 0 0 30px;
+    }
+    .try-luma {
+        padding: 50px 0;
+    }
+    .try-luma-content p {
+        font-size: 18px;
+        margin: 0 0 25px;
+    }
+    .hours{
+        line-height: 45px;
+    }
+    .deal-main-content {
+        margin-bottom: 30px;
+    }
+    .deal-head h3 {
+        font-size: 22px;
+    }
+    .deal-body a {
+        margin-bottom: 15px;
+        margin-top: 15px;
+        padding: 0 25px;
+        display: inline-block;
+        float: none;
+    }
+    .deal-body img{
+        width: 65%;
+    }
+    .deal-body h5 {
+        font-size: 20px;
+    }
+    .deal-main-content {
+        min-height: auto;
+    }
+    .deal-body h6 {
+        font-size: 24px;
+    }
+    .luma-deals {
+        margin: 0;
+    }
+    .way-col-img {
+        margin-bottom: 25px !important;
+    }
+    .luma-perfect {
+        padding: 25px 0;
+    }
+    .luma-faq .faq-qus h5 {
+        font-size: 23px;
+    }
+    .luma-ans p {
+        font-size: 18px;
+    }
+    .luma-faq {
+        margin-bottom: 30px;
+    }
+    .bottom-packg-head h2 {
+        font-size: 25px;
+    }
+    .eric-footer {
+        padding: 40px 0;
+    }
+    .plant-icon {
+        transform: translate(-50%, 36%);
+    }
+    .way-col-img{
+        width: 65%;
+        margin: 0 auto;
+    }
+    .tea-main-cup img{
+        margin: 0 auto;
+    }
+    .tea-main-cup{
+        width: 60%;
+    margin: 0 auto;
+    }
+    .want-col-data {
+        min-height: 300px;
+    }
+    .best-package {
+        top: 0;
+    }
+    .luma-perfect-content h3{
+        font-size: 24px;
+    }
+
+}
+@media (max-width: 479px) and (min-width: 320px) {
+    .header-banner-content h3 {
+        font-size: 24px;
+        margin: 35px 0 25px;
+    }
+    .header-banner-content p {
+        font-size: 22px;
+        margin: 0px 0 175px;
+    }
+    .erim-left-content p {
+        font-size: 18px;
+    }
+    .erim-man-img {
+        display: none;
+    }
+    .aractic-right-content h4 {
+        font-size: 25px;
+    }
+    .aractic-right-content {
+        padding: 50px 5px;
+    }
+    .arctic-root {
+        background-image: none;
+        background-color: #69b1cc;
+    }
+    .one-way-content h3 {
+        font-size: 30px;
+        margin: 0 0 25px;
+    }
+    .one-way-content {
+        padding: 45px 0 50px;
+    }
+    .one-way-content p, .research-col-content p {
+        font-size: 18px;
+    }
+    .way-second-row .way-col-content{
+        margin-top: 35px;
+    }
+    .research-por-content h2 {
+        font-size: 24px;
+        margin: 0 auto 30px auto;
+    }
+    .what-other-heading h3 {
+        font-size: 21px;
+        width: 100%;
+        line-height: 32px;
+        margin: 0 auto 30px auto;
+    }
+    .what-other-content {
+        padding: 40px 0;
+    }
+    .what-other-heading p {
+        font-size: 18px;
+    }
+    .tea-box {
+        width: 100% !important;
+    }
+    .tea-second-row .tea-box:first-child:before,
+    .tea-second-row .tea-box:last-child:before,
+    .tea-third-row .tea-box:nth-child(2):before,
+    .tea-third-row .tea-box:nth-child(3):before {
+        right: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        left: 0;
+    }
+    .tea-cup-main {
+        margin: 50px auto 0 auto;
+    }
+    .tea-box:last-child {
+        margin-top: 100px;
+    }
+    .tea-third-row .tea-box:nth-child(2) {
+        margin-top: -190px;
+    }
+    .tea-third-row .tea-box:nth-child(2), .tea-third-row .tea-box:nth-child(3) {
+        width: 100%;
+    }
+    .tea-box-2:after,
+    .tea-box:after {
+        width: 0;
+        height: 0;
+        left: 0;
+        top: 0;
+        right: 0;
+    }
+    .tea-third-row .tea-box:nth-child(3){
+        margin-top: 100px;
+    }
+    .tea-second-row {
+        margin-top: 45px;
+    }
+    .tea-third-row .tea-box:last-child{
+        display: none;
+    }
+    .header-banner {
+        background-position: 70% 100%;
+    }
+    .research-girl-img {
+        display: none;
+    }
+    .tea-box-content p, .want-proof-content p {
+        font-size: 18px;
+        margin: 0 0 25px;
+    }
+    .weight-loss-row {
+        margin-top: 22px;
+    }
+    .want-proof-content h3 {
+        font-size: 35px;
+        margin: 0 0 25px;
+    }
+    .want-proof-content img {
+        margin-bottom: 25px;
+    }
+    .want-col-data p {
+        font-size: 18px;
+    }
+    .want-col-data {
+        margin-bottom: 120px;
+    }
+    .want-col-data h6 {
+        line-height: 24px;
+        font-size: 16px;
+    }
+    .want-row-data {
+        padding-bottom: 15px;
+    }
+    .try-luma-content h3 {
+        font-size: 30px;
+        margin: 0 0 30px;
+    }
+    .try-luma {
+        padding: 50px 0;
+    }
+    .try-luma-content p {
+        font-size: 18px;
+        margin: 0 0 25px;
+    }
+    .hours{
+        line-height: 45px;
+    }
+    .deal-main-content {
+        margin-bottom: 30px;
+    }
+    .deal-head h3 {
+        font-size: 22px;
+    }
+    .deal-body a {
+        margin-bottom: 15px;
+        margin-top: 15px;
+        padding: 0 25px;
+        display: inline-block;
+        float: none;
+    }
+    .deal-body img{
+        width: 65%;
+    }
+    .deal-body h5 {
+        font-size: 20px;
+    }
+    .deal-main-content {
+        min-height: auto;
+    }
+    .deal-body h6 {
+        font-size: 24px;
+    }
+    .luma-deals {
+        margin: 0;
+    }
+    .way-col-img {
+        margin-bottom: 25px !important;
+    }
+    .luma-perfect {
+        padding: 25px 0;
+    }
+    .luma-faq .faq-qus h5 {
+        font-size: 23px;
+    }
+    .luma-ans p {
+        font-size: 18px;
+    }
+    .luma-faq {
+        margin-bottom: 30px;
+    }
+    .bottom-packg-head h2 {
+        font-size: 25px;
+    }
+    .eric-footer {
+        padding: 40px 0;
+    }
+    .way-col-img{
+        width: 65%;
+        margin: 0 auto;
+    }
+    .tea-main-cup img{
+        margin: 0 auto;
+    }
+    .tea-main-cup{
+        width: 60%;
+    margin: 0 auto;
+    }
+    .best-package {
+        top: 0;
+    }
+    .luma-perfect-content h3{
+        font-size: 24px;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+.mobile-only{
+	display: none;
+}
+}
+
+@media screen and (min-width: 992px) {
+section.what-other .mobile-only{
+    display: none;
+}
+}
+
+@media screen and (max-width: 991px) {
+section.what-other .mobile-only{
+    display: block;
+}
+section.what-other .desktop-only{
+    display: none;
+}
+}
+
+@media screen and (max-width: 767px) {
+.mobile-only{
+	display: block;
+}
+.desktop-only{
+	display: none;
+}
+}
+@media (max-width: 1199px) and (min-width: 992px) {
+.deal-head {
+    min-height: 107px;
+}
+}
+@media (max-width: 991px) and (min-width: 768px) {
+.deal-head {
+    min-height: 90px;
+}
+}

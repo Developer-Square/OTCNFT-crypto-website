@@ -1,0 +1,89 @@
+
+.toggle-on-off{
+display: block;
+    margin: 0 auto;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: #f7f8fa;
+    border-radius: 20px;
+    box-shadow: rgb(47 128 237 / 5%) 0px 4px 8px 0px;
+    padding: 2rem 0px;
+    width: 50vw;
+    overflow: hidden;
+    align-self: center;
+    max-width: 420px;
+    max-height: 100vh;
+    position: absolute;
+    top: 30%;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    }
+    .are-you-sure .are-you-title {
+    color: #000;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 20px 20px;
+    padding: 0px 2rem;
+}
+.are-you-sure .close-icon {
+    float: right;
+    /* margin-right: 20px; */
+    color: #000;
+    margin: 20px 20px;
+}
+.expert-content {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 20px 32px;
+    color:#000;
+}
+.are-you-sure{
+    border-bottom: 1px solid #e5e5e5
+}
+.only-content{
+box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    font-weight: 600;
+    font-size: 20px;
+     padding: 20px 32px;
+     color:#000;
+}
+button.turn-on-btn {
+    padding: 12px;
+    width: 100%;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 20px;
+    outline: none;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    background-color: rgb(253, 64, 64);
+    border: 1px solid rgb(253, 64, 64);
+}
+.expert-button {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.turn-on-div {
+    padding: 0px 32px;
+}
