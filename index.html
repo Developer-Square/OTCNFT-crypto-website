@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OTCNFT</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css'>
+  <link rel='stylesheet' href='https://themes.audemedia.com/html/goodgrowth/css/owl.theme.default.min.css'>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+   <link href="css/select-token-style.css" rel="stylesheet"> 
+   <link href="css/transaction-settings.css" rel="stylesheet">
+   <link href="css/expert-mode.css" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+  <nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"> <img src="./images/Logo Transparent Main.png" alt="logo" class="logo"></a>
+    </div>
+    <!-- <ul class="nav navbar-nav">
+      <li class="active"><a href="#"><b>Swap</b></a></li>
+      <li><a href="#">Pool</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Discord.</a></li>
+     
+    </ul> -->
+  <ul class="clearfix">
+      <li class="active"><a href="#"><b>Swap</b></a></li>
+      <li><a href="#">Pool</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Discord</a></li>
+  </ul>
+  <a href="#" id="pull" class="box-shadow-menu"><i class="fa fa-bars"></i></a>
+
+  </div>
+</nav>
+  </div>
+
+
+<section>	
+<!-- <div class="header">
+ <img src="./images/Logo Transparent Main.png" alt="logo" class="logo">
+</div>	 -->
+<div class="container">
+
+
+
+
+
+
+</section>	
+
+
+<section class="swap-purchase-form popup-form2 popup-form33 popup-form34">
+<div class="tab">
+  <button class="tablinks swap-tab" onclick="openCity(event, 'Swap')" id="defaultOpen">Swap</button>
+  <button class="tablinks" onclick="openCity(event, 'Purchase')">Purchase</button>
+  <div class="setting-icon"> <span class="settings"><i class="fa fa-cog" aria-hidden="true"></i></span></div>
+</div>
+
+<div id="Swap" class="tabcontent">
+<div class="form-field">
+	<div class="form-title">
+		<h3>From</h3>
+	</div>
+		<div class="price-title">
+    <div class="row">
+        <div class="col-md-7">
+		<input class="token-amount-input" inputmode="decimal" title="Token Amount" autocomplete="off" autocorrect="off" type="text" pattern="^[0-9]*[.,]?[0-9]*$" placeholder="0.0" minlength="1" maxlength="79" spellcheck="false" value="">
+        </div>
+        <div class="col-md-5">
+		<button class="ETH">
+			<span class="ETH-span">
+				<img src="./images/download.png">
+				<span class="eth-title">ETH</span>
+                <span class="eth-icon"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+			</span>
+		</button>
+        </div>
+	</div>
+</div>
+</div>
+<div class="arrow-col">
+	<span class="arrow-span"><i class="fa fa-arrow-down" aria-hidden="true"></i></span>
+</div>
+<!-- </div>
+
+<div id="Swap" class="tabcontent"> -->
+<div class="form-field">
+	<div class="form-title">
+		<h3>To</h3>
+	</div>
+		<div class="price-title">
+    <div class="row">
+        <div class="col-md-5">
+		<input class="token-amount-input" inputmode="decimal" title="Token Amount" autocomplete="off" autocorrect="off" type="text" pattern="^[0-9]*[.,]?[0-9]*$" placeholder="0.0" minlength="1" maxlength="79" spellcheck="false" value="">
+        </div>
+        <div class="col-md-7">
+		<button class="select-token">
+			<span class="token-span">Select a token</span>
+                <span class="token-icon"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+		</button>
+        </div>
+	</div>
+</div>
+</div>
+<div class="connect-wallet">
+<button class="connect-btn">Connect Wallet</button>
+</div>
+</div>
+
+
+
+<div id="Purchase" class="tabcontent">
+<div class="form-field">
+	<div class="form-title">
+		<h3>From</h3>
+	</div>
+		<div class="price-title">
+    <div class="row">
+        <div class="col-md-7">
+		<input class="token-amount-input" inputmode="decimal" title="Token Amount" autocomplete="off" autocorrect="off" type="text" pattern="^[0-9]*[.,]?[0-9]*$" placeholder="0.0" minlength="1" maxlength="79" spellcheck="false" value="">
+        </div>
+        <div class="col-md-5">
+		<button class="ETH">
+			<span class="ETH-span">
+				<img src="./images/download.png">
+				<span class="eth-title">ETH</span>
+                <span class="eth-icon"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+			</span>
+		</button>
+        </div>
+	</div>
+</div>
+</div>
+<div class="arrow-col">
+	<span class="arrow-span"><i class="fa fa-arrow-down" aria-hidden="true"></i></span>
+</div>
+<!-- </div> -->
+
+<!-- <div id="Purchase" class="tabcontent"> -->
+<div class="form-field">
+	<div class="form-title">
+		<h3>To</h3>
+	</div>
+		<div class="price-title">
+    <div class="row">
+        <div class="col-md-5">
+		<input class="token-amount-input" inputmode="decimal" title="Token Amount" autocomplete="off" autocorrect="off" type="text" pattern="^[0-9]*[.,]?[0-9]*$" placeholder="0.0" minlength="1" maxlength="79" spellcheck="false" value="">
+        </div>
+        <div class="col-md-7">
+		<button class="select-token">
+			<span class="token-span">Select a token</span>
+                <span class="token-icon"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+		</button>
+        </div>
+	</div>
+</div>
+</div>
+<div class="connect-wallet">
+<button class="connect-btn">Connect Wallet</button>
+</div>
+</div>
+
+</section>
+</div>
+
+<!--Start-ETH-Token -->
+<section class="swap-purchase-form pop-up-form23">
+<div class="token-tab">
+  
+  <div class="title">
+    <p>Select a token</p>
+  </div>
+  <div class="close-icon">
+   <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+  </div>
+
+</div>
+
+
+<div class="Search-form">
+    <div class="row">
+        <div class="col-md-12 search-form-field">
+    <input type="text" id="token-search-input" placeholder="Search name or paste address" autocomplete="off" class="form-input" value="">
+        </div>
+        
+  </div>
+</div>
+
+
+
+<!-- List section -->
+<div class="token-listing">
+<div style="height: 2576px; width: 100%;">
+<div class="select-otion">
+   <img src="./images/download.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">ETH</div>
+    <div class="token-subtitle">Ether</div>
+       </span>
+</div>
+<br>
+<div class="select-otion">
+   <img src="./images/1-inch.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">1INCH</div>
+    <div class="token-subtitle">1Inch</div>
+       </span>
+</div>
+<br>
+<div class="select-otion">
+   <img src="./images/AAVE.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">AAVE</div>
+    <div class="token-subtitle">Aave</div>
+       </span>
+</div>
+<br>
+<div class="select-otion">
+   <img src="./images/AMP.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">AMP</div>
+    <div class="token-subtitle">Amp</div>
+       </span>
+</div>
+<br>
+<div class="select-otion">
+   <img src="./images/logo.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">ANT</div>
+    <div class="token-subtitle">Aragon Network Token</div>
+       </span>
+</div>
+<br>
+<div class="select-otion">
+   <img src="./images/bal.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">BAL</div>
+    <div class="token-subtitle">Balancer</div>
+       </span>
+</div>
+<br>
+<div class="select-otion">
+   <img src="./images/band.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">BAND</div>
+    <div class="token-subtitle">Band Protocol</div>
+       </span>
+</div>
+<br>
+<div class="select-otion">
+   <img src="./images/bat.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">BAT</div>
+    <div class="token-subtitle">BacicAttensionToken</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/BNT.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">BNT</div>
+    <div class="token-subtitle">Bancor Network Token</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/COMP.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">COMP</div>
+    <div class="token-subtitle">Compound</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/CRV.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">CRV</div>
+    <div class="token-subtitle">Curve DAO Token</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/CVC.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">CVC</div>
+    <div class="token-subtitle">Civic</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/DAI.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">DAI</div>
+    <div class="token-subtitle">Dai Stablecoin</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/DNT.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">DNT</div>
+    <div class="token-subtitle">district0x</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/ENJ.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">ENJ</div>
+    <div class="token-subtitle">Enjin</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/GNO.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">GNO</div>
+    <div class="token-subtitle">Gnosis Token</div>
+       </span>
+</div>
+
+
+<div class="select-otion">
+   <img src="./images/GRT.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">GRT</div>
+    <div class="token-subtitle">The Graph</div>
+       </span>
+</div>
+<br>
+
+
+<div class="select-otion">
+   <img src="./images/GUSD.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">GUSD</div>
+    <div class="token-subtitle">GeminiDollar</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/KEEP.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">KEEP</div>
+    <div class="token-subtitle">Keep Network</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/KNC.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">KNC</div>
+    <div class="token-subtitle">Kyber Network Crystal</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/LINK.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">LINK</div>
+    <div class="token-subtitle">ChainLink Token</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/LOOM.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">LOOM</div>
+    <div class="token-subtitle">Loom Network</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/LRC.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">LRC</div>
+    <div class="token-subtitle">LoopringCoin V2</div>
+       </span>
+</div>
+<br>
+
+
+<div class="select-otion">
+   <img src="./images/MANA.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">MANA</div>
+    <div class="token-subtitle">Decentraland</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/MKR.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">MKR</div>
+    <div class="token-subtitle">Maker</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/MLN.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">MLN</div>
+    <div class="token-subtitle">Melon</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/NMR.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">NMR</div>
+    <div class="token-subtitle">Numeraire</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/NU.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">NU</div>
+    <div class="token-subtitle">NuCypher</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/OXT.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">OXT</div>
+    <div class="token-subtitle">Orchid</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/PAXG.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">PAXG</div>
+    <div class="token-subtitle">PaxosGold</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/REN.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">REN</div>
+    <div class="token-subtitle">Republic Token</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/REP.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">REP</div>
+    <div class="token-subtitle">Reputation Augur v1</div>
+       </span>
+</div>
+<br>
+
+
+<div class="select-otion">
+   <img src="./images/REPV2.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">REPv2</div>
+    <div class="token-subtitle">Reputation Augur v2</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/SAND.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">SAND</div>
+    <div class="token-subtitle">Sandbox</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/SKL.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">SKL</div>
+    <div class="token-subtitle">Skale</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/SNX.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">SNX</div>
+    <div class="token-subtitle">Synthetix Network Token</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/STORJ.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">STORJ</div>
+    <div class="token-subtitle">Storj Token</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/TBTC.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">TBTC</div>
+    <div class="token-subtitle">tBTC</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/UMA.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">UMA</div>
+    <div class="token-subtitle">UMA Voting Token v1</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/UNI.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">UNI</div>
+    <div class="token-subtitle">Uniswap</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/USDC.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">USDC</div>
+    <div class="token-subtitle">USDCoin</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/USDT.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">USDT</div>
+    <div class="token-subtitle">Tether USD</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/WBTC.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">WBTC</div>
+    <div class="token-subtitle">Wrapped BTC</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/WETH.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">WETH</div>
+    <div class="token-subtitle">Wrapped Ether</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/YFI.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">YFI</div>
+    <div class="token-subtitle">yearn finance</div>
+       </span>
+</div>
+<br>
+
+<div class="select-otion">
+   <img src="./images/ZRX.png" class="token-img">
+      <span class="token">
+      <div class="token-title" title="Ether">ZRX</div>
+    <div class="token-subtitle">0x Protocol Token</div>
+       </span>
+</div>
+<br>
+
+</div>
+
+
+<div class="resize-triggers">
+  <div class="expand-trigger">
+    <div style="width: 421px; height: 69px;">
+    </div>
+  </div>
+  <div class="contract-trigger">
+    
+  </div>
+</div>
+
+</div>
+
+  <div class="footer-manage">
+    <div class="manage-column">
+      <button color="#2172E5" class="list-token-manage-button">
+        <div class="button-text">
+          <div class="manage-icon"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></div>
+          <div class="manage-text">Manage</div>
+        </div>
+
+      </button>
+    </div>
+  </div>
+</section>
+<!--End-ETH-Token-->
+
+
+<!--start-transacation-->
+   <section class="transaction-settings pop-up-form33" >
+<div class="transaction-heading">
+  <div class="trans-title">Transaction Settings</div>
+
+  <div class="slippage-tolerance">
+    <div class="slippage-heading">
+      <div class="slippage-title">Slippage tolerance
+    </div>
+  </div>
+    <div class="slippage-buttons">
+      <button class="tolerance-percent">0.1%</button>
+      <button class="tolerance-percent">0.5%</button>
+      <button class="tolerance-percent">1%</button>
+      <button tabindex="-1" class="slippage-btn"><div class="slippage-div"><input placeholder="1.00" color="" class="slippage-input" value="">%</div></button>
+  </div>
+</div>
+<br><br>
+  <div class="slippage-heading">
+      <div class="slippage-title">Transaction deadline
+    </div>
+  </div>
+  <div class="deadline-buttons">
+      <button class="tolerance-percent-input">20</button>Minutes
+</div>
+<br><br>
+  <div class="transaction-heading">
+      <div class="trans-title">Interface Settings
+    </div>
+</div>
+<div class="toggle-modes">
+  <div class="toggle-mode">
+    <div class="toggle-title">Toggle Expert Mode</div>
+      <div class="tooltip-icon">
+        <div class="font-icon">
+           <span class="font-icon"><i class="fa fa-question-circle-o" aria-hidden="true"></i></span>
+        <span class="tooltip-text">Bypasses confirmation modals and allows high slippage trades. Use at your own risk.</span>
+        </div>
+      </div>
+    </div>
+    <button id="toggle-expert-mode-button" class="toggle-btn">
+      <span class="on-function">On</span><span class="off-function">Off</span>
+    </button>
+  </div>
+  <div class="toggle-modes">
+  <div class="toggle-mode">
+    <div class="toggle-title">Disable Multihops</div>
+      <div class="tooltip-icon">
+        <div class="font-icon">
+           <span class="font-icon"><i class="fa fa-question-circle-o" aria-hidden="true"></i></span>
+        <span class="tooltip-text">Restricts swaps to direct pairs only.</span>
+        </div>
+      </div>
+    </div>
+    <button id="toggle-expert-mode-button" class="toggle-btn">
+      <span class="on-function1">On</span><span class="off-function1">Off</span>
+    </button>
+  </div>
+</div>
+</section>
+<!--end-transacation-->
+
+<!--Expert-mode-->
+  <section class="toggle-on-off pop-up-form34">
+    <div class="on-pop-up">
+<div class="are-you-sure">
+  <div class="are-you-title">
+    <p>Are you sure?</p>
+  </div>
+  <div class="close-icon">
+   <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+  </div>
+</div>
+<div class="expert-content">
+  Expert mode turns off the confirm transaction prompt and allows high slippage trades that often result in bad rates and lost funds.
+</div>
+<div class="only-content">
+   ONLY USE THIS MODE IF YOU KNOW WHAT YOU ARE DOING.
+</div>
+<div class="turn-on-div">
+<button class="turn-on-btn">
+  <div id="confirm-expert-mode" class="expert-button">
+  Turn On Expert Mode
+</div>
+</button>
+</div>
+</div>
+  </section>
+<!--End-expert-mode-->
+
+
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+<script>
+    $(function() {
+      var pull    = $('#pull');
+        menu    = $('nav ul');
+        menuHeight  = menu.height();
+
+      $(pull).on('click', function(e) {
+        e.preventDefault();
+        menu.slideToggle();
+      });
+
+
+      $(window).resize(function(){
+            var w = $(window).width();
+            if(w > 320 && menu.is(':hidden')) {
+              menu.removeAttr('style');
+            }
+        });
+    });
+</script>
+
+
+
+<style>
+  /*.pop-up-form23 {
+    display: none;
+}*/
+
+.pop-up-form23 {
+    position: absolute;
+    top: 10%; 
+   /* bottom: -26%;*/
+    left: 39%;
+    right: 50%;
+    margin: 0 auto;
+    align-items: center;
+        z-index: 2;
+}
+
+body.intro {
+    z-index: 2;
+    /* overflow: hidden; */
+    /* display: flex; */
+    /* -webkit-box-align: center; */
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+@media only screen and (max-width: 767px){
+  .box-shadow-menu .fa.fa-bars {
+    position: absolute;
+    right: 0;
+    z-index: 999;
+}
+    .pop-up-form23 {
+    position: absolute;
+    top: 19%; 
+   /* bottom: -26%;*/
+    left:0;
+    right: 50%;
+    margin: 0 auto;
+    align-items: center;
+        z-index: 2;
+        max-width: 85%;
+        margin:0px 25px;
+}
+.toggle-on-off{
+  max-height: unset;
+    top: 30%;
+    width: 85%;
+
+}
+.search-form-field{
+  width:80%;
+}
+.transaction-settings {
+    /* min-width: 20.125rem; */
+    background-color: rgb(247, 248, 250);
+    box-shadow: rgb(0 0 0 / 1%) 0px 0px 1px, rgb(0 0 0 / 4%) 0px 4px 8px, rgb(0 0 0 / 4%) 0px 16px 24px, rgb(0 0 0 / 1%) 0px 24px 32px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    position: absolute;
+    top: 35%;
+    right: 0;
+    z-index: 100;
+    padding: 20px;
+    left: 0;
+}
+section.transaction-settings.pop-up-form33 {
+    margin: 0px 20px;
+}
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+.pop-up-form23 {
+    position: absolute;
+    top: 10%;
+    /* bottom: -26%; */
+    left: 23%;
+    right: 50%;
+    margin: 0 auto;
+    align-items: center;
+    z-index: 2;
+}
+.transaction-settings {
+    top: 42%;
+    right: 25%;
+    }
+}
+  </style>
+
+  <script>
+$(document).ready(function(){
+
+$(".pop-up-form23").hide();
+$(".pop-up-form33").hide();
+$(".pop-up-form34").hide();
+
+$(".ETH, .select-token").click(function(){
+$(".pop-up-form23").show();
+  });
+
+$(".close-icon").click(function(){
+$(".pop-up-form23").hide();
+  });
+
+ $(".ETH, .select-token").click(function(){
+    $("body").addClass("intro");
+  });
+
+ $(".close-icon").click(function(){
+    $("body").removeClass("intro");
+  });
+
+$(".setting-icon").click(function(){
+$(".pop-up-form33").toggle();
+  });
+
+$(".on-function").click(function(){
+$(".pop-up-form34").show();
+$(".pop-up-form33").hide();
+  });
+
+$(".off-function").click(function(){
+$(".pop-up-form34").show();
+$(".pop-up-form33").hide();
+  });
+
+$(".close-icon").click(function(){
+$(".pop-up-form34").hide();
+  });
+
+});
+</script>
+</body>
+</html>
