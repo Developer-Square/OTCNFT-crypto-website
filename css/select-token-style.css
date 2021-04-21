@@ -1,19 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 body{
-font-family: 'Source Sans Pro', sans-serif; 
+    font-family: 'Inter', sans-serif;
     font-size: 14px;
     line-height: 1.42857143;
     color: #fff;
     min-height: 100vh;
     background-position: 0px -30vh;
     background-repeat: no-repeat;
-     background-image: radial-gradient(50% 50% at 50% 50%, rgb(39 141 255 / 14%) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: radial-gradient(50% 50% at 50% 50%, rgb(39 141 255 / 14%) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 /*header*/
 .header {
-    padding: 16px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 img.logo {

@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+  --button-background-color: rgb(39 141 255 / 14%);
+  --button-color: rgb(30,144,255);
+  --border-color: rgb(0,191,255);
+  --tabs-background-color: #EFF4F5;
+  --primary-color: #fff;
+}
+
 body{
   font-family: 'Inter', sans-serif;
   font-size: 14px;
@@ -11,10 +20,14 @@ body{
 }
 /*header*/
 .header {
-    padding: 16px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 70px;
 }
+
+.header ul.clearfix {
+  width: 100%;
+}
+
 img.logo {
     width: 55px;
 }
@@ -156,6 +169,11 @@ color: #000;
     font-weight: 600;
     margin: 10px 20px;
 }
+
+.navbar {
+  margin-bottom: 10px;
+}
+
 .navbar ul li a{
 font-size: 18px;
     font-weight: 600;
@@ -189,9 +207,7 @@ font-size: 18px;
   padding: 6px 12px;
   border-top: none;
 }
-.header ul.clearfix {
-    float: left;
-}
+
 a#pull.box-shadow-menu {
     color: #000;
     font-weight: 600;
@@ -203,14 +219,13 @@ a#pull.box-shadow-menu {
 
 nav ul {
   margin: 0 auto;
-  width: 600px;
   height: 60px; 
 }
 
 nav li {
   display: inline; /* pulls the <li> into the <nav> and displays them inlide i.e. side by side */
   float: left;
-  
+  padding-top: 22px;
 }
 
 nav a {
@@ -228,6 +243,10 @@ nav li:last-child a {
 nav a#pull {
   display: none;
 }
+
+.navbar-header {
+  padding-right: 20px;
+}
 .navbar-brand{
     height:0px;
     padding: 5px;
@@ -244,21 +263,56 @@ nav a#pull {
 
 .connect-wallet-appbar {
   padding: 0.8rem;
+  margin-top: 10px;
   font-weight: 600;
-  margin-top: 34px;
   font-size: 17px;
   border-radius: 12px;
   float: right;
-  background-color: rgb(39 141 255 / 14%);
-  border: 1px solid rgb(253, 234, 241);
-  color: rgb(30,144,255);
+  background-color: var(--button-background-color);
+  border: 1px solid var(--border-color);
+  color: var(--button-color);
   outline: 0;
 }
 
-.connect-wallet-appbar:focus, .connect-wallet-appbar:active:focus {
+.connect-wallet-appbar:focus, .connect-wallet-appbar:active:focus, .connect-wallet-appbar:hover {
   outline: 0;
-  color: rgb(30,144,255);
+  color: var(--button-color);
 }
+
+.connect-wallet-appbar:hover {
+  border: 1px solid var(--button-color);
+}
+
+/* Toggle Tabs */
+.tabs-container {
+  width: 200px;
+  height: 32px;
+  margin-bottom: 40px;
+  background: var(--tabs-background-color);
+  border-radius: 16px;
+  color: var(--button-color);
+}
+
+.tab-row {
+  height: inherit;
+}
+
+.tab-toggle-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tabs-container .active-tab {
+  background: var(--button-color);
+  height: inherit;
+  width: 100%;
+  border-radius: 16px;
+  color: var(--primary-color);
+  text-align: center;
+}
+
 /* Breakpoint of 600px */
 
 @media screen and (max-width: 600px) {
@@ -316,7 +370,6 @@ nav a#pull {
 @media (min-width: 768px){
 .header ul.clearfix {
   margin-top: 12px;
-  padding: 22px;
 }
 }
   
