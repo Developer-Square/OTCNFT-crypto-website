@@ -6,6 +6,7 @@
   --border-color: rgb(0,191,255);
   --tabs-background-color: #EFF4F5;
   --primary-color: #fff;
+  --secondary-color: #333;
 }
 
 body{
@@ -50,8 +51,9 @@ button.tablinks {
     font-weight: 500;
 }
 input.token-amount-input {
-    font-size: 24px;
-    border: unset;
+  outline: none;
+  font-size: 24px;
+  border: unset;
 }
 .swap-purchase-form{
     position: relative;
@@ -90,9 +92,15 @@ span.arrow-span {
     padding: 16px;
     text-align: center;
 }
+
+span.ETH-span {
+  display: flex;
+  align-items: center;
+}
+
 span.ETH-span img {
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
     box-shadow: rgb(0 0 0 / 8%) 0px 6px 10px;
     border-radius: 24px;
 }
@@ -102,7 +110,7 @@ button.ETH {
 }
 span.eth-title {
     margin: 0px 0.25rem 0px 0.75rem;
-    font-size: 24px;
+    font-size: 22px;
     color: #000;
     font-weight: 600;
 }
@@ -149,6 +157,11 @@ span.token-icon {
     font-size: 16px;
     font-weight: 500;
 }
+
+.connect-btn:focus {
+  outline: none;
+}
+
 div#Purchase {
     padding: 20px;
         margin-top: 30px;
@@ -261,13 +274,17 @@ nav a#pull {
   font-size: 26px;
 }
 
+.buttons-container {
+  float: right;
+}
+
 .connect-wallet-appbar {
   padding: 0.8rem;
-  margin-top: 10px;
+  margin-top: 18px;
   font-weight: 600;
+  height: 40px;
   font-size: 17px;
   border-radius: 12px;
-  float: right;
   background-color: var(--button-background-color);
   border: 1px solid var(--border-color);
   color: var(--button-color);
@@ -281,6 +298,20 @@ nav a#pull {
 
 .connect-wallet-appbar:hover {
   border: 1px solid var(--button-color);
+}
+
+.theme-toggle-button {
+  margin-top: 18px;
+  background: var(--button-background-color);
+  width: 40px;
+  height: 40px;
+  padding: 0.8rem;
+  border-radius: 9px;
+  color: var(--secondary-color);
+  font-size: 26px;
+  text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 /* Toggle Tabs */

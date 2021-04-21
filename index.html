@@ -48,7 +48,12 @@
           <li><a href="#">FAQ</a></li>
           <li><a href="#">Discord</a></li>
           <!-- Contact Button -->
-          <button class="btn connect-wallet-appbar">Connect to a Wallet</button>
+          <div class="d-flex buttons-container">
+            <button class="btn connect-wallet-appbar mr-3">Connect to a Wallet</button>
+            <button class="btn theme-toggle-button">
+              <span class="iconify" data-icon="heroicons-outline:sun" data-inline="false"></span>
+            </button>
+          </div>
         </ul>
         <a href="#" id="pull" class="box-shadow-menu"><i class="fa fa-bars"></i></a>
 
@@ -70,8 +75,6 @@
 
   <section class="swap-purchase-form popup-form2 popup-form33 popup-form34">
     <div class="tab">
-      <button class="tablinks swap-tab" onclick="openCity(event, 'Swap')" id="defaultOpen">Swap</button>
-      <button class="tablinks" onclick="openCity(event, 'Purchase')">Purchase</button>
       <div class="setting-icon"> <span class="settings"><i class="fa fa-cog" aria-hidden="true"></i></span></div>
     </div>
 
@@ -755,48 +758,7 @@
   </section>
   <!--End-expert-mode-->
 
-
-  <script>
-    function toggleTabs(evt, cityName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tabToggleButtons = document.getElementsByClassName("tab-toggle-buttons");
-      for (i = 0; i < tabToggleButtons.length; i++) {
-        tabToggleButtons[i].className = tabToggleButtons[i].className.replace(" active-tab", "");
-      }
-      document.getElementById(cityName).style.display = "block";
-      evt.currentTarget.className += " active-tab";
-    }
-
-    // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
-  </script>
-
-  <script>
-    $(function () {
-      var pull = $('#pull');
-      menu = $('nav ul');
-      menuHeight = menu.height();
-
-      $(pull).on('click', function (e) {
-        e.preventDefault();
-        menu.slideToggle();
-      });
-
-
-      $(window).resize(function () {
-        var w = $(window).width();
-        if (w > 320 && menu.is(':hidden')) {
-          menu.removeAttr('style');
-        }
-      });
-    });
-  </script>
-
-
+  <script src="./js/main.js"></script>
 
   <style>
     /*.pop-up-form23 {
@@ -969,6 +931,7 @@
       row-gap: 8px !important;
     }
   </style>
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
