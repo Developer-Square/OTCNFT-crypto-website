@@ -92,7 +92,7 @@
                 maxlength="79" spellcheck="false" value="">
             </div>
             <div class="col-md-5">
-              <button class="ETH">
+              <button class="ETH swap">
                 <span class="ETH-span">
                   <img src="./images/download.png" class="from-swap-image">
                   <span class="eth-title from-swap-title">ETH</span>
@@ -150,10 +150,10 @@
                 maxlength="79" spellcheck="false" value="">
             </div>
             <div class="col-md-5">
-              <button class="ETH">
+              <button class="ETH purchase">
                 <span class="ETH-span">
-                  <img src="./images/download.png">
-                  <span class="eth-title">ETH</span>
+                  <img src="./images/download.png" class="from-purchase-image">
+                  <span class="eth-title from-purchase-title" >ETH</span>
                   <span class="eth-icon"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
                 </span>
               </button>
@@ -465,8 +465,6 @@
           setTokens(evt)
         });
       });
-
-
 
       $(".close-icon").click(function () {
         $(".pop-up-form23").hide();

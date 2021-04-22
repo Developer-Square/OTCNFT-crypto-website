@@ -291,7 +291,7 @@ nav a#pull {
   outline: 0;
 }
 
-.connect-wallet-appbar:focus, .connect-wallet-appbar:active:focus, .connect-wallet-appbar:hover {
+.connect-wallet-appbar:focus, .connect-wallet-appbar:active:focus, .connect-wallet-appbar:hover, .theme-toggle-button:focus, .ETH:focus {
   outline: 0;
   color: var(--button-color);
 }

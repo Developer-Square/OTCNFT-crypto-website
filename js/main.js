@@ -1,10 +1,10 @@
-let value;
+let page;
 
 
 // Read the json file with the token list and display it,
 // onclick of the button
 const loadTokens = () => {
-    let tokenContainer = document.querySelector('#token-container')
+  let tokenContainer = document.querySelector('#token-container')
     tokenData.map(token => {
         if(tokenContainer) {
             // First create the outer container.
@@ -15,6 +15,8 @@ const loadTokens = () => {
             let img = document.createElement('img')
             img.src = token.imageUrl
             img.className = 'token-img'
+            // Add a title so that we can easily identify which token was clicked.
+            img.title = token.title
             selectOption.appendChild(img)
 
             let span = document.createElement('span')
@@ -22,7 +24,6 @@ const loadTokens = () => {
 
             let tokenTitle = document.createElement('div')
             tokenTitle.className = 'token-title'
-            tokenTitle.title = token.content
             // Add the actual title to the div
             tokenTitle.innerHTML = token.title
             let tokenSubtitle = document.createElement('div')
@@ -44,13 +45,34 @@ const loadTokens = () => {
 
 // Set the chosen token to the page.
 const setTokens = (evt) => {
-    let img = document.querySelector('.from-swap-image')
-    let title = document.querySelector('.from-swap-title')
-    let selectedTitle = evt.currentTarget.innerText.slice(0,3)
+    let swapFromImg = document.querySelector('.from-swap-image')
+    let purchaseFromImg = document.querySelector('.from-purchase-image')
+    let swapFromTitle = document.querySelector('.from-swap-title')
+    let purchaseFromTitle = document.querySelector('.from-purchase-title')
+    let selectedTitle = evt.currentTarget.firstChild.title
 
-    if (img && title) {
-        img.src = `./images/${selectedTitle}.png`
-        title.innerHTML = selectedTitle
+    if (page === 'swap') {
+      if (swapFromImg && swapFromTitle) {
+        tokenData.map(token => {
+          // Find the token with the same title as the selected title,
+          // then display its image.
+          if(token.title === selectedTitle) {
+            swapFromImg.src = token.imageUrl
+            swapFromTitle.innerHTML = selectedTitle
+          }
+        })
+      }
+    } else if (page === 'purchase') {
+      if (purchaseFromImg && purchaseFromTitle) {
+        tokenData.map(token => {
+          // Find the token with the same title as the selected title,
+          // then display its image.
+          if(token.title === selectedTitle) {
+            purchaseFromImg.src = token.imageUrl
+            purchaseFromTitle.innerHTML = selectedTitle
+          }
+        })
+      }
     }
 }
 
@@ -68,6 +90,13 @@ function toggleTabs(evt, cityName) {
     }
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active-tab";
+    // Set which page the user is on
+    const buttonClicked = evt.currentTarget.innerHTML.toLowerCase()
+    if (buttonClicked.includes('swap')) {
+      page = 'swap'
+    } else if (buttonClicked.includes('purchase')) {
+      page = 'purchase'
+    }
   }
   
 // Get the element with id="defaultOpen" and click on it
