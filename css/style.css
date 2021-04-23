@@ -7,6 +7,12 @@
   --tabs-background-color: #EFF4F5;
   --primary-color: #fff;
   --secondary-color: #333;
+  --darkmode-background: rgb(44, 47, 54);
+  --darkmode-connectbutton-background: rgba(21, 61, 111, 0.44);
+  --darkmode-connectbutton-color: rgb(109, 168, 255);
+  --darkmode-themebutton-background: rgb(86, 90, 105);
+  --darkmode-applinks-color: rgb(195, 197, 203);
+  --darkmode-form-background: rgb(33, 36, 41);
 }
 
 body{
@@ -167,7 +173,7 @@ div#Purchase {
         margin-top: 30px;
 }
 input.token-amount-input {
-    width: 50%;
+    width: 100%;
 }
 .tab .setting-icon i{
     float: right;
@@ -346,6 +352,52 @@ nav a#pull {
   border-radius: 16px;
   color: var(--primary-color);
   text-align: center;
+}
+
+/* Dark Mode */
+.dark-mode-body {
+  background-image: none;
+  background: var(--darkmode-background);
+}
+
+.dark-mode-connect-wallet-appbar {
+  background: var(--darkmode-connectbutton-background);
+  border: none;
+}
+
+.dark-mode-app-logo, .dark-mode-form-title {
+  color: var(--primary-color) !important;
+}
+
+.dark-mode-appbar-links, .dark-mode-input-title {
+  color: var(--darkmode-applinks-color) !important;
+}
+
+.dark-mode-theme-button, .dark-mode-theme-button:focus, .dark-mode-theme-button:active:focus {
+  color: var(--primary-color);
+  background: var(--darkmode-themebutton-background);
+}
+
+.dark-mode-form-field {
+  border: 1px solid var(--darkmode-background);
+}
+
+.dark-mode-form, .dark-mode-swap-purchase-button {
+  background: var(--darkmode-form-background) !important;
+}
+
+input.dark-mode-input {
+  background: var(--darkmode-form-background);
+  color: var(--primary-color);
+}
+
+span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon {
+  color: var(--primary-color) !important;
+}
+
+.dark-mode-connectbtn, .dark-mode-tab-container {
+  background: var(--darkmode-connectbutton-background);
+  color: var(--darkmode-connectbutton-color);
 }
 
 /* Breakpoint of 600px */

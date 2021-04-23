@@ -1,5 +1,6 @@
 let page;
 let buttonClicked;
+let lightMode = true;
 
 
 // Read the json file with the token list and display it,
@@ -86,9 +87,11 @@ const setSecondTokenButton = (imageUrl, titleText, imgClassName, titleClassName)
     textContainer.className = 'ETH-span'
     img.className = imgClassName
     img.src = imageUrl
-    title.className = `eth-title ${titleClassName}`
+    // If the user is dark mode, add dark mode styles to the title,
+    // and icon
+    title.className = `eth-title ${titleClassName} ${!lightMode ? 'dark-mode-token-title': ''}`
     title.innerHTML = titleText
-    icon.className = 'eth-icon'
+    icon.className = `eth-icon ${!lightMode ? 'dark-mode-token-icon': ''}`
     dropDownIcon.className = 'fa fa-angle-down'
     dropDownIcon.setAttribute('aria-hidden', 'true')
 
@@ -177,6 +180,70 @@ function toggleTabs(evt, cityName) {
       page = 'purchase'
     }
   }
+
+  const toggleClass = (elemement, className) => {
+    elemement.classList.toggle(className)
+  }
+
+  // Helper function to help toggle classes in a node list
+  const toggleNodeListClasses = (nodeList, className) => {
+    // Make an array out of a nodelist so that we can map over it.
+    Array.from(nodeList).map(link => link.classList.toggle(className))
+  }
+ 
+  const switchToDarkMode = () => {
+      let themeButton = document.querySelector('.theme-toggle-button')
+      let body = document.getElementsByTagName('body')
+      let connectWalletBtnAppBar = document.querySelector('.connect-wallet-appbar')
+      let appBarLogo = document.querySelector('.navbar-brand-logo')
+      let navbarLinks = document.querySelectorAll('.appbar-links')
+      let swapPurchaseForm = document.querySelector('.swap-purchase-form')
+      let formFields = document.querySelectorAll('.form-field')
+      let formTitles = document.querySelectorAll('#form-title')
+      let inputTitles = document.querySelectorAll('.input-title')
+      let inputs = document.querySelectorAll('.token-amount-input')
+      let swapPurchaseButtons = document.querySelectorAll('.ETH')
+      let tokenTitle = document.querySelectorAll('.eth-title')
+      let tokenIcon = document.querySelectorAll('.eth-icon')
+      let settingIcon = document.querySelector('.fa-cog')
+      let connectWalletBtns = document.querySelectorAll('.connect-btn')
+      let tabContainer = document.querySelector('.tabs-container')
+
+      let toggleClassNames = [
+        'dark-mode-theme-button', 
+        'dark-mode-connect-wallet-appbar',
+        'dark-mode-app-logo',
+        'dark-mode-form',
+        'dark-mode-setting-icon',
+        'dark-mode-tab-container'
+    ]
+
+    let toggleElements = [
+      themeButton,
+      connectWalletBtnAppBar,
+      appBarLogo,
+      swapPurchaseForm,
+      settingIcon,
+      tabContainer
+    ]
+
+    // Map over both arrays and add toggle classes to all,
+    // of them.
+    toggleClassNames.map((className, index) => {
+      toggleClass(toggleElements[index], className)
+    })
+
+      body[0].classList.toggle('dark-mode-body')
+      toggleNodeListClasses(navbarLinks, 'dark-mode-appbar-links')
+      toggleNodeListClasses(formTitles, 'dark-mode-form-title')
+      toggleNodeListClasses(inputTitles, 'dark-mode-input-title')
+      toggleNodeListClasses(inputs, 'dark-mode-input')
+      toggleNodeListClasses(formFields, 'dark-mode-form-field')
+      toggleNodeListClasses(swapPurchaseButtons, 'dark-mode-swap-purchase-button')
+      toggleNodeListClasses(tokenTitle, 'dark-mode-token-title')
+      toggleNodeListClasses(tokenIcon, 'dark-mode-token-icon')
+      toggleNodeListClasses(connectWalletBtns, 'dark-mode-connectbtn')
+  }
   
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
@@ -198,4 +265,80 @@ $(function () {
         menu.removeAttr('style');
       }
     });
+  });
+
+  $(document).ready(function () {
+
+    $(".pop-up-form23").hide();
+    $(".pop-up-form33").hide();
+    $(".pop-up-form34").hide();
+    $('.token-button-container-swap').hide();  
+    $('.token-button-container-purchase').hide();  
+    $('.dark').hide();  
+
+    $('.theme-toggle-button').click(function () {
+      
+      // Switcht between the light and dark icons
+      if (lightMode) {
+        $('.light').hide()
+        $('.dark').show()
+        lightMode = !lightMode
+      } else {
+        $('.light').show()
+        $('.dark').hide()
+        lightMode = !lightMode
+      }
+      switchToDarkMode();
+    })
+
+    $(".ETH, .select-token").click(function (buttonEvt) {
+      const buttonClicked = buttonEvt.currentTarget.className
+
+      $(".pop-up-form23").show();
+      loadTokens(buttonClicked)
+      $(".select-otion").click(function (evt) {
+        $(".pop-up-form23").hide();
+        // Decide which button to show depending on which page,
+        // the user is on.
+        if (buttonClicked.includes('to-purchase')) {
+          $('.token-button-container-purchase').show();
+        } else if (buttonClicked.includes('to-swap')) {
+          $('.token-button-container-swap').show();  
+        }
+
+        $("body").removeClass("intro");
+        setTokens(evt)
+      });
+    });
+
+    $(".close-icon").click(function () {
+      $(".pop-up-form23").hide();
+    });
+
+    $(".ETH, .select-token").click(function () {
+      $("body").addClass("intro");
+    });
+
+    $(".close-icon").click(function () {
+      $("body").removeClass("intro");
+    });
+
+    $(".setting-icon").click(function () {
+      $(".pop-up-form33").toggle();
+    });
+
+    $(".on-function").click(function () {
+      $(".pop-up-form34").show();
+      $(".pop-up-form33").hide();
+    });
+
+    $(".off-function").click(function () {
+      $(".pop-up-form34").show();
+      $(".pop-up-form33").hide();
+    });
+
+    $(".close-icon").click(function () {
+      $(".pop-up-form34").hide();
+    });
+
   });

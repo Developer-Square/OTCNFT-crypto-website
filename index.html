@@ -31,6 +31,7 @@
   <link href="css/select-token-style.css" rel="stylesheet">
   <link href="css/transaction-settings.css" rel="stylesheet">
   <link href="css/expert-mode.css" rel="stylesheet">
+  <link href="css/additional-file.css" rel="stylesheet">
 </head>
 
 <body>
@@ -44,14 +45,15 @@
         </div>
 
         <ul class="clearfix">
-          <li class="active"><a href="#"><b>Swap</b></a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Discord</a></li>
+          <li class="active"><a href="#" class="appbar-links"><b>Swap</b></a></li>
+          <li><a href="#" class="appbar-links">FAQ</a></li>
+          <li><a href="#" class="appbar-links">Discord</a></li>
           <!-- Contact Button -->
           <div class="d-flex buttons-container">
             <button class="btn connect-wallet-appbar mr-3">Connect to a Wallet</button>
             <button class="btn theme-toggle-button">
-              <span class="iconify" data-icon="heroicons-outline:sun" data-inline="false"></span>
+              <span class="iconify light" data-icon="heroicons-outline:sun" data-inline="false"></span>
+              <span class="iconify dark" data-icon="bytesize:moon" data-inline="false"></span>
             </button>
           </div>
         </ul>
@@ -81,8 +83,8 @@
     <div id="Swap" class="tabcontent">
       <div class="form-field">
         <div class="form-title">
-          <h3><b>Swap</b></h3>
-          <h3>From</h3>
+          <h3 id="form-title"><b>Swap</b></h3>
+          <h3 class="input-title">From</h3>
         </div>
         <div class="price-title">
           <div class="row">
@@ -111,7 +113,7 @@
 <div id="Swap" class="tabcontent"> -->
       <div class="form-field">
         <div class="form-title">
-          <h3>To</h3>
+          <h3 class="input-title">To</h3>
         </div>
         <div class="price-title">
           <div class="row">
@@ -146,14 +148,14 @@
     <div id="Purchase" class="tabcontent">
       <div class="form-field">
         <div class="form-title">
-          <h3><b>Purchase</b></h3>
-          <h3>From</h3>
+          <h3 id="form-title"><b>Purchase</b></h3>
+          <h3 class="input-title">Buyer's address</h3>
         </div>
         <div class="price-title">
           <div class="row">
             <div class="col-md-7">
               <input class="token-amount-input" inputmode="decimal" title="Token Amount" autocomplete="off"
-                autocorrect="off" type="text" pattern="^[0-9]*[.,]?[0-9]*$" placeholder="0.0" minlength="1"
+                autocorrect="off" type="text" pattern="^[0-9]*[.,]?[0-9]*$" placeholder="3J924d**********" minlength="1"
                 maxlength="79" spellcheck="false" value="">
             </div>
             <div class="col-md-5">
@@ -176,13 +178,13 @@
       <!-- <div id="Purchase" class="tabcontent"> -->
       <div class="form-field">
         <div class="form-title">
-          <h3>To</h3>
+          <h3 class="input-title">Seller's address</h3>
         </div>
         <div class="price-title">
           <div class="row">
             <div class="col-md-6 to-input">
               <input class="token-amount-input" inputmode="decimal" title="Token Amount" autocomplete="off"
-                autocorrect="off" type="text" pattern="^[0-9]*[.,]?[0-9]*$" placeholder="0.0" minlength="1"
+                autocorrect="off" type="text" pattern="^[0-9]*[.,]?[0-9]*$" placeholder="3J924d**********" minlength="1"
                 maxlength="79" spellcheck="false" value="">
             </div>
 
@@ -202,7 +204,7 @@
         </div>
       </div>
       <div class="connect-wallet">
-        <button class="connect-btn">Connect Wallet</button>
+        <button class="connect-btn">Purchase</button>
       </div>
     </div>
 
@@ -334,6 +336,7 @@
 
   <!--Expert-mode-->
   <section class="toggle-on-off pop-up-form34">
+    <!-- <object data="./expert-mode.html"></object> -->
     <div class="on-pop-up">
       <div class="are-you-sure">
         <div class="are-you-title">
@@ -364,196 +367,6 @@
   <script type="text/javascript" src="./js/main.js"></script>
   <script type="text/javascript" src="./resources/token.js"></script>
 
-
-  <style>
-    /*.pop-up-form23 {
-    display: none;
-}*/
-
-    .pop-up-form23 {
-      position: absolute;
-      top: 10%;
-      /* bottom: -26%;*/
-      left: 39%;
-      right: 50%;
-      margin: 0 auto;
-      align-items: center;
-      z-index: 2;
-    }
-
-    body.intro {
-      z-index: 2;
-      /* overflow: hidden; */
-      /* display: flex; */
-      /* -webkit-box-align: center; */
-      align-items: center;
-      -webkit-box-pack: center;
-      justify-content: center;
-      background-color: rgba(0, 0, 0, 0.3);
-    }
-
-    @media only screen and (max-width: 767px) {
-      .box-shadow-menu .fa.fa-bars {
-        position: absolute;
-        right: 0;
-        z-index: 999;
-      }
-
-      .pop-up-form23 {
-        position: absolute;
-        top: 19%;
-        /* bottom: -26%;*/
-        left: 0;
-        right: 50%;
-        margin: 0 auto;
-        align-items: center;
-        z-index: 2;
-        max-width: 85%;
-        margin: 0px 25px;
-      }
-
-      .toggle-on-off {
-        max-height: unset;
-        top: 30%;
-        width: 85%;
-
-      }
-
-      .search-form-field {
-        width: 80%;
-      }
-
-      .transaction-settings {
-        /* min-width: 20.125rem; */
-        background-color: rgb(247, 248, 250);
-        box-shadow: rgb(0 0 0 / 1%) 0px 0px 1px, rgb(0 0 0 / 4%) 0px 4px 8px, rgb(0 0 0 / 4%) 0px 16px 24px, rgb(0 0 0 / 1%) 0px 24px 32px;
-        border-radius: 12px;
-        display: flex;
-        flex-direction: column;
-        font-size: 1rem;
-        position: absolute;
-        top: 35%;
-        right: 0;
-        z-index: 100;
-        padding: 20px;
-        left: 0;
-      }
-
-      section.transaction-settings.pop-up-form33 {
-        margin: 0px 20px;
-      }
-    }
-
-    @media only screen and (min-width: 768px) and (max-width: 1024px) {
-      .pop-up-form23 {
-        position: absolute;
-        top: 10%;
-        /* bottom: -26%; */
-        left: 23%;
-        right: 50%;
-        margin: 0 auto;
-        align-items: center;
-        z-index: 2;
-      }
-
-      .transaction-settings {
-        top: 42%;
-        right: 25%;
-      }
-    }
-  </style>
-
-  <script>
-    $(document).ready(function () {
-
-      $(".pop-up-form23").hide();
-      $(".pop-up-form33").hide();
-      $(".pop-up-form34").hide();
-      $('.token-button-container-swap').hide();  
-      $('.token-button-container-purchase').hide();  
-
-      $(".ETH, .select-token").click(function (buttonEvt) {
-        const buttonClicked = buttonEvt.currentTarget.className
-
-        $(".pop-up-form23").show();
-        loadTokens(buttonClicked)
-        $(".select-otion").click(function (evt) {
-          $(".pop-up-form23").hide();
-          // Decide which button to show depending on which page,
-          // the user is on.
-          if (buttonClicked.includes('to-purchase')) {
-            $('.token-button-container-purchase').show();
-          } else if (buttonClicked.includes('to-swap')) {
-            $('.token-button-container-swap').show();  
-          }
-
-          $("body").removeClass("intro");
-          setTokens(evt)
-        });
-      });
-
-      $(".close-icon").click(function () {
-        $(".pop-up-form23").hide();
-      });
-
-      $(".ETH, .select-token").click(function () {
-        $("body").addClass("intro");
-      });
-
-      $(".close-icon").click(function () {
-        $("body").removeClass("intro");
-      });
-
-      $(".setting-icon").click(function () {
-        $(".pop-up-form33").toggle();
-      });
-
-      $(".on-function").click(function () {
-        $(".pop-up-form34").show();
-        $(".pop-up-form33").hide();
-      });
-
-      $(".off-function").click(function () {
-        $(".pop-up-form34").show();
-        $(".pop-up-form33").hide();
-      });
-
-      $(".close-icon").click(function () {
-        $(".pop-up-form34").hide();
-      });
-
-    });
-  </script>
-  <style>
-    input {
-      color: #000;
-    }
-
-    .navbar-header {
-      padding-top: 13px;
-    }
-
-    @media(min-width:768px) {
-      section.transaction-settings.pop-up-form33 {
-        max-width: 350px;
-        width: 100%;
-      }
-    }
-
-    .arrow-col {
-      padding: 6px !important;
-      text-align: center;
-    }
-
-    .connect-wallet {
-      padding: 10px 0px !important;
-    }
-
-    .transaction-heading {
-
-      row-gap: 8px !important;
-    }
-  </style>
   <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

@@ -1,0 +1,120 @@
+.pop-up-form23 {
+    position: absolute;
+    top: 10%;
+    /* bottom: -26%;*/
+    left: 39%;
+    right: 50%;
+    margin: 0 auto;
+    align-items: center;
+    z-index: 2;
+  }
+
+  body.intro {
+    z-index: 2;
+    /* overflow: hidden; */
+    /* display: flex; */
+    /* -webkit-box-align: center; */
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  @media only screen and (max-width: 767px) {
+    .box-shadow-menu .fa.fa-bars {
+      position: absolute;
+      right: 0;
+      z-index: 999;
+    }
+
+    .pop-up-form23 {
+      position: absolute;
+      top: 19%;
+      /* bottom: -26%;*/
+      left: 0;
+      right: 50%;
+      margin: 0 auto;
+      align-items: center;
+      z-index: 2;
+      max-width: 85%;
+      margin: 0px 25px;
+    }
+
+    .toggle-on-off {
+      max-height: unset;
+      top: 30%;
+      width: 85%;
+
+    }
+
+    .search-form-field {
+      width: 80%;
+    }
+
+    .transaction-settings {
+      /* min-width: 20.125rem; */
+      background-color: rgb(247, 248, 250);
+      box-shadow: rgb(0 0 0 / 1%) 0px 0px 1px, rgb(0 0 0 / 4%) 0px 4px 8px, rgb(0 0 0 / 4%) 0px 16px 24px, rgb(0 0 0 / 1%) 0px 24px 32px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      font-size: 1rem;
+      position: absolute;
+      top: 35%;
+      right: 0;
+      z-index: 100;
+      padding: 20px;
+      left: 0;
+    }
+
+    section.transaction-settings.pop-up-form33 {
+      margin: 0px 20px;
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .pop-up-form23 {
+      position: absolute;
+      top: 10%;
+      /* bottom: -26%; */
+      left: 23%;
+      right: 50%;
+      margin: 0 auto;
+      align-items: center;
+      z-index: 2;
+    }
+
+    .transaction-settings {
+      top: 42%;
+      right: 25%;
+    }
+  }
+
+  input {
+    color: #000;
+  }
+
+  .navbar-header {
+    padding-top: 13px;
+  }
+
+  @media(min-width:768px) {
+    section.transaction-settings.pop-up-form33 {
+      max-width: 350px;
+      width: 100%;
+    }
+  }
+
+  .arrow-col {
+    padding: 6px !important;
+    text-align: center;
+  }
+
+  .connect-wallet {
+    padding: 10px 0px !important;
+  }
+
+  .transaction-heading {
+
+    row-gap: 8px !important;
+  }
