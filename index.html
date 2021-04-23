@@ -115,13 +115,20 @@
         </div>
         <div class="price-title">
           <div class="row">
-            <div class="col-md-5">
+            <div class="col-md-6 to-input-swap">
               <input class="token-amount-input" inputmode="decimal" title="Token Amount" autocomplete="off"
                 autocorrect="off" type="text" pattern="^[0-9]*[.,]?[0-9]*$" placeholder="0.0" minlength="1"
                 maxlength="79" spellcheck="false" value="">
             </div>
-            <div class="col-md-7">
-              <button class="select-token">
+
+            <div class="col-md-5 token-button-container-swap">
+              <button class="ETH to-swap">
+                <!-- The Dynamic token content will be placed here -->
+              </button>              
+            </div>
+
+            <div class="col-md-6 select-token-container-swap">
+              <button class="select-token to-swap">
                 <span class="token-span">Select a token</span>
                 <span class="token-icon"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
               </button>
@@ -173,13 +180,20 @@
         </div>
         <div class="price-title">
           <div class="row">
-            <div class="col-md-5">
+            <div class="col-md-6 to-input">
               <input class="token-amount-input" inputmode="decimal" title="Token Amount" autocomplete="off"
                 autocorrect="off" type="text" pattern="^[0-9]*[.,]?[0-9]*$" placeholder="0.0" minlength="1"
                 maxlength="79" spellcheck="false" value="">
             </div>
-            <div class="col-md-7">
-              <button class="select-token">
+
+            <div class="col-md-5 token-button-container-purchase">
+              <button class="ETH to-purchase">
+                <!-- The Dynamic token content will be placed here -->
+              </button>              
+            </div>
+
+            <div class="col-md-6 select-token-container-purchase">
+              <button class="select-token to-purchase">
                 <span class="token-span">Select a token</span>
                 <span class="token-icon"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
               </button>
@@ -455,12 +469,24 @@
       $(".pop-up-form23").hide();
       $(".pop-up-form33").hide();
       $(".pop-up-form34").hide();
+      $('.token-button-container-swap').hide();  
+      $('.token-button-container-purchase').hide();  
 
-      $(".ETH, .select-token").click(function () {
+      $(".ETH, .select-token").click(function (buttonEvt) {
+        const buttonClicked = buttonEvt.currentTarget.className
+
         $(".pop-up-form23").show();
-        loadTokens()
+        loadTokens(buttonClicked)
         $(".select-otion").click(function (evt) {
           $(".pop-up-form23").hide();
+          // Decide which button to show depending on which page,
+          // the user is on.
+          if (buttonClicked.includes('to-purchase')) {
+            $('.token-button-container-purchase').show();
+          } else if (buttonClicked.includes('to-swap')) {
+            $('.token-button-container-swap').show();  
+          }
+
           $("body").removeClass("intro");
           setTokens(evt)
         });

@@ -314,6 +314,10 @@ nav a#pull {
   align-items: center;
 }
 
+.theme-toggle-button:focus, svg:focus,.select-token:focus, .token-span:focus, .eth-title:focus {
+  outline: none !important;
+}
+
 /* Toggle Tabs */
 .tabs-container {
   width: 200px;
