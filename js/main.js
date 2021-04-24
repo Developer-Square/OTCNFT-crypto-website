@@ -9,6 +9,7 @@ const loadTokens = (buttonClickedClassName) => {
   buttonClicked = buttonClickedClassName
 
   let tokenContainer = document.querySelector('#token-container')
+
     tokenData.map(token => {
         if(tokenContainer) {
             // First create the outer container.
@@ -27,7 +28,7 @@ const loadTokens = (buttonClickedClassName) => {
             span.className = 'token'
 
             let tokenTitle = document.createElement('div')
-            tokenTitle.className = 'token-title'
+            tokenTitle.className = `token-title ${!lightMode ? 'dark-mode-app-logo': ''}`
             // Add the actual title to the div
             tokenTitle.innerHTML = token.title
             let tokenSubtitle = document.createElement('div')
@@ -40,11 +41,30 @@ const loadTokens = (buttonClickedClassName) => {
 
             // Then add the span to the selectOption.
             selectOption.appendChild(span)
-
             // And finally to the tokenContainer.
             tokenContainer.appendChild(selectOption)
         }
     })
+}
+
+// Adds the dark mode styling to the token list,
+// so that the tokens can be visible on dark mode.
+const addDarkMode = () => {
+  let ethTitle = document.querySelectorAll('.token-title')
+
+  Array.from(ethTitle).map(title => {
+    title.classList.add('dark-mode-app-logo')
+  })
+}
+
+// Removes the dark mode styling from the token list,
+// so that the tokens can be visible on light mode.
+const removeDarkMode = () => {
+  let ethTitle = document.querySelectorAll('.token-title')
+
+  Array.from(ethTitle).map(title => {
+    title.classList.remove('dark-mode-app-logo')
+  })
 }
 
 // Changes 'select-token' button to a button with actual currency.
@@ -208,6 +228,11 @@ function toggleTabs(evt, cityName) {
       let settingIcon = document.querySelector('.fa-cog')
       let connectWalletBtns = document.querySelectorAll('.connect-btn')
       let tabContainer = document.querySelector('.tabs-container')
+      let popUpForm23 = document.querySelector('.pop-up-form23')
+      let tabIcontitle = document.querySelector('.title')
+      let inputBorder = document.querySelector('.form-input')
+      let footerManage = document.querySelector('.footer-manage')
+      let closeIcon = document.querySelector('.close-icon')
 
       let toggleClassNames = [
         'dark-mode-theme-button', 
@@ -215,7 +240,12 @@ function toggleTabs(evt, cityName) {
         'dark-mode-app-logo',
         'dark-mode-form',
         'dark-mode-setting-icon',
-        'dark-mode-tab-container'
+        'dark-mode-tab-container',
+        'dark-mode-pop-up-form-23',
+        'dark-mode-form-title',
+        'dark-mode-input-border',
+        'dark-mode-pop-up-form-23',
+        'dark-mode-form-title'
     ]
 
     let toggleElements = [
@@ -224,7 +254,12 @@ function toggleTabs(evt, cityName) {
       appBarLogo,
       swapPurchaseForm,
       settingIcon,
-      tabContainer
+      tabContainer,
+      popUpForm23,
+      tabIcontitle,
+      inputBorder,
+      footerManage,
+      closeIcon
     ]
 
     // Map over both arrays and add toggle classes to all,
@@ -295,7 +330,14 @@ $(function () {
       const buttonClicked = buttonEvt.currentTarget.className
 
       $(".pop-up-form23").show();
-      loadTokens(buttonClicked)
+
+      // First check whether the token list had already been rendered.
+      let ethTitle = document.querySelector('.token-title')
+      if (ethTitle && !lightMode) {
+        addDarkMode()
+      } else {
+        loadTokens(buttonClicked)
+      }
       $(".select-otion").click(function (evt) {
         $(".pop-up-form23").hide();
         // Decide which button to show depending on which page,
@@ -305,22 +347,37 @@ $(function () {
         } else if (buttonClicked.includes('to-swap')) {
           $('.token-button-container-swap').show();  
         }
-
-        $("body").removeClass("intro");
+        if (lightMode) {
+          $("body").removeClass("intro");
+        } else {
+          removeDarkMode()
+          $("body").removeClass("dark-mode-intro")
+        }
         setTokens(evt)
       });
     });
 
     $(".close-icon").click(function () {
+      if (!lightMode) {
+        removeDarkMode()
+      }
       $(".pop-up-form23").hide();
     });
 
-    $(".ETH, .select-token").click(function () {
-      $("body").addClass("intro");
+    $(".ETH").click(function () {
+      if (lightMode) {
+        $("body").addClass("intro");
+      } else {
+        $("body").addClass("dark-mode-intro")
+      }
     });
 
     $(".close-icon").click(function () {
-      $("body").removeClass("intro");
+      if (lightMode) {
+        $("body").removeClass("intro");
+      } else {
+        $("body").removeClass("dark-mode-intro")
+      }
     });
 
     $(".setting-icon").click(function () {

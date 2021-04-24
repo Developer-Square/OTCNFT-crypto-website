@@ -35,7 +35,6 @@ img.logo {
 .search-form-field {
     padding: 16px;
     border-radius: 20px;
-    border: 1px solid #f7f8fa;
 }
 
 .token-tab .title{
@@ -134,7 +133,7 @@ box-sizing: border-box;
 .token-listing{
 position: relative;
     height: 100%;
-    max-height: 500px;
+    max-height: 359px;
     width: 100%;
     overflow: auto;
     will-change: transform;

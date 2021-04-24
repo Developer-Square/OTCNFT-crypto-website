@@ -13,6 +13,9 @@
   --darkmode-themebutton-background: rgb(86, 90, 105);
   --darkmode-applinks-color: rgb(195, 197, 203);
   --darkmode-form-background: rgb(33, 36, 41);
+  --darkmode-overlay-background: rgba(0, 0, 0, 0.85);
+  --darkmode-input-border: rgb(64, 68, 79);
+  --darkmode-managebutton-color: rgb(33, 114, 229);
 }
 
 body{
@@ -356,8 +359,11 @@ nav a#pull {
 
 /* Dark Mode */
 .dark-mode-body {
-  background-image: none;
   background: var(--darkmode-background);
+}
+
+body.dark-mode-intro {
+  background-color: var(--darkmode-overlay-background);
 }
 
 .dark-mode-connect-wallet-appbar {
@@ -398,6 +404,16 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
 .dark-mode-connectbtn, .dark-mode-tab-container {
   background: var(--darkmode-connectbutton-background);
   color: var(--darkmode-connectbutton-color);
+}
+
+.dark-mode-pop-up-form-23 {
+  background: var(--darkmode-form-background) !important;
+  border-top: var(--darkmode-background) !important;
+}
+
+.dark-mode-input-border {
+  border: 1px solid var(--darkmode-input-border) !important;
+  color: var(--primary-color) !important;
 }
 
 /* Breakpoint of 600px */

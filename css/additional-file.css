@@ -1,9 +1,8 @@
 .pop-up-form23 {
     position: absolute;
-    top: 10%;
-    /* bottom: -26%;*/
-    left: 39%;
-    right: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     margin: 0 auto;
     align-items: center;
     z-index: 2;
