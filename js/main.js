@@ -279,6 +279,13 @@ function toggleTabs(evt, cityName) {
       toggleNodeListClasses(tokenIcon, 'dark-mode-token-icon')
       toggleNodeListClasses(connectWalletBtns, 'dark-mode-connectbtn')
   }
+
+  const setConnectWallet = () => {
+    let popUpFormTitle = document.querySelector('.pop-up-form-title')
+    if (popUpFormTitle) {
+      popUpFormTitle.innerHTML = 'Connect to a wallet'
+    }
+  }
   
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
@@ -380,8 +387,18 @@ $(function () {
       }
     });
 
+    $("pop-up-form33").on('focusout', function() {
+      $(this).hide()
+    })
+
+
     $(".setting-icon").click(function () {
-      $(".pop-up-form33").toggle();
+      $(".pop-up-form33").toggle().focus();
+    });
+
+    $(".connect-wallet-appbar, .connect-btn").click(function () {
+      $(".pop-up-form23").toggle();
+      setConnectWallet()
     });
 
     $(".on-function").click(function () {

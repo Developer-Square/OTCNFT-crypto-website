@@ -8,8 +8,9 @@
     flex-direction: column;
     font-size: 1rem;
     position: absolute;
-    top: 32%;
-    right: 38%;
+    top: 64%;
+    left: 51%;
+    transform: translate(-49%, -36%);
     z-index: 100;
     padding: 20px;
 }
