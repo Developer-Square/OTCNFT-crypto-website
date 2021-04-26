@@ -18,6 +18,7 @@
   --darkmode-managebutton-color: rgb(33, 114, 229);
   --connect-wallet-backgroud: rgb(247, 248, 250);
   --connect-wallet-font-color: rgb(0, 0, 0);
+  --connect-wallet-button-border: rgb(237, 238, 242);
 }
 
 body{

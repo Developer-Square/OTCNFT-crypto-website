@@ -4,6 +4,8 @@
     background: var(--connect-wallet-backgroud);
     padding: 2rem;
     height: 410px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .connect-wallet-styling {
@@ -14,7 +16,7 @@
 .connect-wallet-buttons {
     background: transparent;
     outline: none;
-    border: 1px solid rgb(237, 238, 242);
+    border: 1px solid var(--connect-wallet-button-border);
     border-radius: 12px;
     display: flex;
     flex-direction: row;
@@ -32,7 +34,7 @@
 
 .connect-wallet-buttons:hover{
     cursor: pointer;
-    border: 1px solid rgb(255, 0, 122);
+    border: 1px solid var(--darkmode-managebutton-color);
 }
 
 .connect-wallet-buttons p {
@@ -56,6 +58,22 @@
 }
 
 .connect-wallet-footer span {
-    margin-right: 10px;
+    margin-right: 15px;
+}
+
+.connect-wallet-footer .highlight-text {
     color: var(--button-color);
+}
+
+.dark-mode-connect-wallet-form {
+    background: var(--darkmode-background);
+}
+
+.dark-mode-connect-wallet-buttons {
+    color: var(--primary-color);
+    border: 1px solid var(--darkmode-input-border);
+}
+
+.dark-mode-footer {
+    color: var(--primary-color);
 }

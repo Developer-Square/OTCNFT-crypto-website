@@ -334,6 +334,9 @@ $(function () {
       $(".Search-form").show();
       $(".token-listing").show();
       $(".footer-manage").show();
+      let popUpForm = document.querySelector('.pop-up-form23')
+      // Remove the styling that positions the popup form a bit lower.
+      popUpForm.classList.remove('connect-wallet-styling')
       const buttonClicked = buttonEvt.currentTarget.className
 
       $(".pop-up-form23").show();
@@ -386,30 +389,4 @@ $(function () {
         $("body").removeClass("dark-mode-intro")
       }
     });
-
-    // Hide the setting popup form when a user clicks elsewhere.
-    // Todo: Make it work.
-    $("pop-up-form33").on('focusout', function() {
-      $(this).hide()
-    })
-
-
-    $(".setting-icon").click(function () {
-      $(".pop-up-form33").toggle().focus();
-    });
-
-    $(".on-function").click(function () {
-      $(".pop-up-form34").show();
-      $(".pop-up-form33").hide();
-    });
-
-    $(".off-function").click(function () {
-      $(".pop-up-form34").show();
-      $(".pop-up-form33").hide();
-    });
-
-    $(".close-icon").click(function () {
-      $(".pop-up-form34").hide();
-    });
-
   });
