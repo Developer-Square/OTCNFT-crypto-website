@@ -312,3 +312,30 @@ background: #f7f8fa;
 .dark-mode-transaction-form {
     background: var(--darkmode-background);
 }
+
+.dark-mode-transaction-title {
+    color: var(--transaction-setting-color);
+}
+
+.dark-mode-transaction-buttons {
+    color: var(--primary-color) !important;
+    background: var(--darkmode-form-background) !important;
+    border: 1px solid var(--darkmode-input-border) !important;
+}
+
+.dark-mode-transaction-input {
+    background: var(--darkmode-form-background) !important;
+}
+
+.dark-mode-transaction-toggle-buttons {
+    background: var(--darkmode-input-border) !important;
+}
+
+.dark-mode-transaction-toggle-buttons span {
+    color: var(--transaction-setting-color) !important;
+}
+
+.dark-mode-transaction-active-button {
+    background: var(--darkmode-themebutton-background) !important;
+}
+

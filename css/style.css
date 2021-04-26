@@ -19,6 +19,7 @@
   --connect-wallet-backgroud: rgb(247, 248, 250);
   --connect-wallet-font-color: rgb(0, 0, 0);
   --connect-wallet-button-border: rgb(237, 238, 242);
+  --transaction-setting-color: rgb(195, 197, 203);
 }
 
 body{

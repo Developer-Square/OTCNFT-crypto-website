@@ -16,7 +16,7 @@ display: block;
     max-width: 420px;
     max-height: 100vh;
     position: absolute;
-    top: 30%;
+    top: 33%;
     right: 0;
     left: 0;
     z-index: 2;
@@ -86,4 +86,16 @@ button.turn-on-btn {
 }
 .turn-on-div {
     padding: 0px 32px;
+}
+
+.dark-mode-expert-mode-form {
+    background-color: var(--darkmode-background) !important;
+}
+
+.dark-mode-expert-mode-content {
+    color: var(--primary-color) !important;
+}
+
+.dark-mode-expert-border {
+    border-bottom: 1px solid var(--darkmode-input-border) !important;
 }
