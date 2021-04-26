@@ -16,6 +16,8 @@
   --darkmode-overlay-background: rgba(0, 0, 0, 0.85);
   --darkmode-input-border: rgb(64, 68, 79);
   --darkmode-managebutton-color: rgb(33, 114, 229);
+  --connect-wallet-backgroud: rgb(247, 248, 250);
+  --connect-wallet-font-color: rgb(0, 0, 0);
 }
 
 body{
@@ -77,6 +79,11 @@ input.token-amount-input {
 .tab {
     padding: 12px 1rem 0px 1.5rem;
 }
+
+.form-title h3 {
+  margin-top: 0px;
+}
+
 .form-field {
     padding: 16px;
     border-radius: 20px;
