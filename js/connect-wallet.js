@@ -70,8 +70,17 @@
     }
   }
 
+  const MediaQueryChecker = () => {
+    if (screen.width < 450) {
+      let appbarButtons = document.querySelector('.buttons-container')
+      appbarButtons.classList.add('hide-on-mobile')
+      console.log('here')
+    } 
+  }
+
 $(document).ready(function() {
     $('.connect-wallet-form').hide()
+    MediaQueryChecker()
 
     // For the connect wallet popup
     $(".connect-wallet-appbar, .connect-btn").click(function () {

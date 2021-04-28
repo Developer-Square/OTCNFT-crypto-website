@@ -70,7 +70,7 @@ input.token-amount-input {
 }
 .swap-purchase-form{
     position: relative;
-    max-width: 420px;
+    /* max-width: 420px; */
     width: 100%;
         background: rgb(255, 255, 255);
     box-shadow: rgb(0 0 0 / 1%) 0px 0px 1px, rgb(0 0 0 / 4%) 0px 4px 8px, rgb(0 0 0 / 4%) 0px 16px 24px, rgb(0 0 0 / 1%) 0px 24px 32px;
@@ -203,13 +203,18 @@ color: #000;
 
 .navbar {
   margin-bottom: 10px;
+  background: transparent;
+}
+
+.navbar-nav {
+  width: 100%;
 }
 
 .navbar ul li a{
-font-size: 18px;
-    font-weight: 600;
-    color: #000;
-    text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
 }
 
 .tab button {
@@ -286,7 +291,7 @@ nav a#pull {
 
 .navbar-brand-logo {
   color: rgb(0, 0, 0);
-  margin-left: 60px;
+  margin-left: 75px;
   margin-top: 17px;
   font-weight: bold;
   font-size: 26px;
@@ -366,6 +371,18 @@ nav a#pull {
   text-align: center;
 }
 
+/* The fixed mobile footer that appears on mobile screens */
+.mobile-footer {
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--primary-color);
+  height: 72px;
+  border-radius: 12px 12px 0px 0px;
+}
+
 /* Dark Mode */
 .dark-mode-body {
   background: var(--darkmode-background);
@@ -425,8 +442,92 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
   color: var(--primary-color) !important;
 }
 
-/* Breakpoint of 600px */
+@media (max-width: 320px) {
+  .header {
+    margin-bottom: 30px;
+  }
+  .hide-on-mobile {
+    display: none !important;
+  }
 
+  .navbar-header {
+    margin-right: auto;
+    padding-top: 0;
+  }
+
+  img.logo { 
+    width: 35px;
+  }
+
+  .navbar-brand-logo {
+    margin-left: 55px;
+    margin-top: 10px;
+    font-size: 22px;
+  }
+
+  .navbar-default {
+    border: none;
+  }
+
+  .tabs-container {
+    margin-bottom: 20px;
+  }
+
+  .swap-purchase-form{
+      max-width:290px;
+      margin-bottom: 120px;
+  }
+  
+  button.select-token {
+      padding: 8px 8px;
+  }
+  
+  /* Resizing the padding so that the select token button is in one line */
+  .select-token-container-swap, .select-token-container-purchase, .from-swap-btn, .from-purchase-btn {
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+
+  .connect-wallet {
+    padding-bottom: 5px;
+    padding-top: 20px;
+  }
+
+  div#Swap, div#Purchase {
+    padding: 10px 10px 10px 10px;
+  }
+
+  .footer-buttons-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .connect-wallet-appbar, .theme-toggle-button {
+    margin-top: 0;
+  }
+  }
+  
+  @media (min-width: 321px) and (max-width: 450px) {
+  .swap-purchase-form{
+      max-width: 320px;
+  }
+  
+  button.select-token {
+      padding: 8px 10px;
+  }
+  }
+
+/* Breakpoint of 600px */
+@media all and (max-width: 414px) {
+  /* Select a span */
+  span.token-span {
+    font-size: 14px;
+  }
+}
 @media screen and (max-width: 600px) {
   nav { 
     height: auto;

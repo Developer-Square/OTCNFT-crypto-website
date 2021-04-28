@@ -1,18 +1,15 @@
 .pop-up-form23 {
     position: absolute;
-    top: 51%;
+    /* top: 51%;
     left: 50%;
     transform: translate(-50%, -49%);
-    margin: 0 auto;
+    margin: 0 auto; */
     align-items: center;
     z-index: 2;
   }
 
   body.intro {
     z-index: 2;
-    /* overflow: hidden; */
-    /* display: flex; */
-    /* -webkit-box-align: center; */
     align-items: center;
     -webkit-box-pack: center;
     justify-content: center;
@@ -26,10 +23,9 @@
       z-index: 999;
     }
 
-    .pop-up-form23 {
+    /* .pop-up-form23 {
       position: absolute;
       top: 19%;
-      /* bottom: -26%;*/
       left: 0;
       right: 50%;
       margin: 0 auto;
@@ -37,7 +33,7 @@
       z-index: 2;
       max-width: 85%;
       margin: 0px 25px;
-    }
+    } */
 
     .toggle-on-off {
       max-height: unset;
@@ -51,7 +47,6 @@
     }
 
     .transaction-settings {
-      /* min-width: 20.125rem; */
       background-color: rgb(247, 248, 250);
       box-shadow: rgb(0 0 0 / 1%) 0px 0px 1px, rgb(0 0 0 / 4%) 0px 4px 8px, rgb(0 0 0 / 4%) 0px 16px 24px, rgb(0 0 0 / 1%) 0px 24px 32px;
       border-radius: 12px;
@@ -75,7 +70,6 @@
     .pop-up-form23 {
       position: absolute;
       top: 10%;
-      /* bottom: -26%; */
       left: 23%;
       right: 50%;
       margin: 0 auto;
@@ -109,9 +103,9 @@
     text-align: center;
   }
 
-  .connect-wallet {
-    padding: 10px 0px !important;
-  }
+  /* .connect-wallet {
+    padding: 10px 0px;
+  } */
 
   .transaction-heading {
 
