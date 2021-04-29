@@ -66,29 +66,8 @@
     }
   }
 
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .pop-up-form23 {
-      position: absolute;
-      top: 10%;
-      left: 23%;
-      right: 50%;
-      margin: 0 auto;
-      align-items: center;
-      z-index: 2;
-    }
-
-    .transaction-settings {
-      top: 42%;
-      right: 25%;
-    }
-  }
-
   input {
     color: #000;
-  }
-
-  .navbar-header {
-    padding-top: 13px;
   }
 
   @media(min-width:768px) {

@@ -99,3 +99,9 @@
         height: 420px;
     }
 }
+
+@media all and (min-width: 992px) {
+    .connect-wallet-form {
+        height: 420px !important;
+    }
+}

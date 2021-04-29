@@ -205,10 +205,6 @@ color: #000;
   background: transparent;
 }
 
-.navbar-nav {
-  width: 100%;
-}
-
 .navbar ul li a{
   font-size: 18px;
   font-weight: 600;
@@ -653,12 +649,24 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
   .select-token {
     margin-left: 0;
   }
+
+  div#Swap, div#Purchase {
+    padding: 20px 20px 10px 20px;
+  }
+
+  .connect-wallet {
+    padding: 25px 0 13px 0;
+  }
 }
 
 @media all and (min-width: 768px) {
 
 .navbar li {
-  padding-top: 16px;
+  padding-top: 12px;
+}
+
+.navbar-nav {
+  margin-left: 45%;
 }
 }
 
@@ -699,5 +707,32 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
     display: flex;
     align-items: center;
     justify-content: space-around;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .header {
+    margin-bottom: 90px;
+  }
+
+  .navbar {
+    margin-bottom: 10px;
+  }
+
+  .navbar-brand-logo {
+    font-size: 26px;
+  }
+
+  .mobile-footer {
+    display: none !important;
+  }
+
+  .navbar-nav {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .buttons-container {
+    margin-left: auto;
   }
 }

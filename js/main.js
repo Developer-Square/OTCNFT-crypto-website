@@ -342,6 +342,11 @@ $(function () {
     })
 
     $(".ETH, .select-token").click(function (buttonEvt) {
+      if (lightMode) {
+        $("body").addClass("intro");
+      } else {
+        $("body").addClass("dark-mode-intro")
+      }
       // Hide the bottom so that the page does not scroll,
       // while the popup is visible.
       $(".bottom").hide();

@@ -335,3 +335,24 @@ button {
         width: 420px;
     }
 }
+
+@media all and (min-width: 768px) {
+    .pop-up-form23 {
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -45%);
+        border-radius: 20px;
+    }
+}
+
+@media all and (min-width: 992px) {
+    .pop-up-form23 {
+        top: 53%;
+        left: 50%;
+        transform: translate(-50%, -47%);
+    }
+
+    .token-listing {
+        max-height: 505px !important;
+    }
+}
