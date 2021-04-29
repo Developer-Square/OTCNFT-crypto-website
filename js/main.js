@@ -79,6 +79,11 @@ const setSecondTokenButton = (imageUrl, titleText, imgClassName, titleClassName)
   let swapTokenTitle = document.querySelector('.to-swap-title')
   let purchaseTokenIcon = document.querySelector('.to-purchase-image')
   let purchaseTokenTitle = document.querySelector('.to-purchase-title')
+  let fromSwapBtn = document.querySelector('.from-swap-btn')
+  let fromPurchaseBtn = document.querySelector('.from-purchase-btn')
+  let tokenButtonContainerSwap = document.querySelector('.token-button-container-swap')
+  let tokenButtonContainerPurchase = document.querySelector('.token-button-container-purchase')
+
 
   if (buttonClicked.includes('to-swap')) {
     // Hide the 'select a token' button.
@@ -125,11 +130,19 @@ const setSecondTokenButton = (imageUrl, titleText, imgClassName, titleClassName)
     if (buttonClicked.includes('to-swap')) {
       swapTokenButton.appendChild(textContainer)
       // Make the input in the 'to section' larger as we make the button smaller.
-      toSwapInput.className = 'col-md-7 to-swap-input'
+      // toSwapInput.className = `${screen.width < 375 ? 'col-6' : 'col-md-7'} to-swap-input`
+      fromSwapBtn.className ='col-6 col-md-5 from-swap-btn'
+
+      // Make the button smaller.
+      tokenButtonContainerSwap.classList.add('col-6')
+
     } else if (buttonClicked.includes('to-purchase')) {
       purchaseTokenButton.appendChild(textContainer)
       // Make the input in the 'to section' larger as we make the button smaller.
-      toPurchaseInput.className = 'col-md-7 to-input'
+      // toPurchaseInput.className = `${screen.width < 375 ? 'col-5' : 'col-md-7'} to-input`
+      fromPurchaseBtn.className = 'col-6 col-md-5 from-purchase-btn'
+      // Make the button smaller.
+      tokenButtonContainerPurchase.classList.add('col-6')
     }
   }
 
@@ -340,6 +353,8 @@ $(function () {
       let popUpForm = document.querySelector('.pop-up-form23')
       // Remove the styling that positions the popup form a bit lower.
       popUpForm.classList.remove('connect-wallet-styling')
+      let popUpFormTitle = document.querySelector('.pop-up-form-title')
+      popUpFormTitle.innerHTML = 'Select a token'
       const buttonClicked = buttonEvt.currentTarget.className
 
       $(".pop-up-form23").show();
@@ -353,6 +368,7 @@ $(function () {
       }
       $(".select-otion").click(function (evt) {
         $(".pop-up-form23").hide();
+        $(".bottom").show();
         // Decide which button to show depending on which page,
         // the user is on.
         if (buttonClicked.includes('to-purchase')) {

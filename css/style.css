@@ -35,7 +35,6 @@ body{
 /*header*/
 .header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  margin-bottom: 70px;
 }
 
 .header ul.clearfix {
@@ -504,11 +503,48 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
     font-size: 14px;
   }
   }
+
   
-  @media (min-width: 321px) and (max-width: 450px) {
-  .swap-purchase-form{
+  @media all and (min-width: 360px) {
+    .header {
+      margin-bottom: 30px;
+    }
+
+    .swap-purchase-form{
       max-width: 320px;
+    }
+
+    
+    .ETH {
+      margin-left: 15%;
+    }
+
+    .select-token {
+      margin-left: 5%;
+    }
   }
+
+  @media all and (min-width: 375px) {
+    .swap-purchase-form{
+      max-width: 350px;
+    }
+
+    .ETH {
+      margin-left: 25%;
+    }
+
+    .select-token {
+      margin-left: 15%;
+    }
+  }
+
+  @media all and (min-width: 411px) {
+    .header {
+      margin-bottom: 70px;
+    }
+  }
+  
+  @media (min-width: 321px) and (max-width: 480px) {
 
   img.logo { 
     width: 45px;
@@ -544,39 +580,15 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
   }
   }
 
-@media screen and (max-width: 600px) {
-  nav { 
-    height: auto;
+@media all and (max-width: 375px) {
+  /* To make the page scrollable */
+  .bottom {
+    height: 130px;
   }
-  nav ul {
-  width: 100%;
-  display: block;
-  height: auto;
-  }
-  nav li {
-    width: 100%;
-    float: left;
-    position: relative;
-  }
-  nav li a {
-     padding: 10px;
-  }
-  nav a {
-    width: 100%; /* makes it so they are no longer 100px wide and makes them 100% of the <li> which is 50% of the <ul> which is 100% of whatever the screen is */
-    
-    text-indent: 25px;
-} 
 }
-  
+
 /* Breakpoint of 480px */
 @media only screen and (max-width: 480px) {
-  .header {
-    margin-bottom: 40px;
-  }
-
-  .hide-on-mobile {
-    display: none !important;
-  }
 
   nav {
     border-bottom: 0;
@@ -610,9 +622,76 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
     position: absolute;
     right: 15px;
     top: 10px;
-  } 
+  }
 
-  
+  .connect-wallet-appbar, .theme-toggle-button {
+    margin-top: 0;
+  }
+}
+
+@media all and (min-width: 576px) {
+  .header {
+    margin-bottom: 30px;
+  }
+
+  .navbar {
+    margin-bottom: 0;
+  }
+
+  .navbar ul li a {
+    font-size: 17px;
+  }
+
+  .navbar-brand-logo {
+    font-size: 22px;
+  }
+
+  button.select-token {
+    padding: 8px 13px;
+  }
+
+  .select-token {
+    margin-left: 0;
+  }
+}
+
+@media all and (min-width: 768px) {
+
+.navbar li {
+  padding-top: 16px;
+}
+}
+
+@media screen and (max-width: 600px) {
+  nav { 
+    height: auto;
+  }
+  nav ul {
+  width: 100%;
+  display: block;
+  height: auto;
+  }
+  nav li {
+    width: 100%;
+    float: left;
+    position: relative;
+  }
+  nav li a {
+     padding: 10px;
+  }
+  nav a {
+    width: 100%; /* makes it so they are no longer 100px wide and makes them 100% of the <li> which is 50% of the <ul> which is 100% of whatever the screen is */
+    
+    text-indent: 25px;
+} 
+}
+
+
+@media all and (max-width: 991px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+
   .footer-buttons-container {
     position: relative;
     width: 100%;
@@ -621,19 +700,4 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
     align-items: center;
     justify-content: space-around;
   }
-
-  /* To make the page scrollable */
-  .bottom {
-    height: 130px;
-  }
-
-  .connect-wallet-appbar, .theme-toggle-button {
-    margin-top: 0;
-  }
 }
-
-/* @media (min-width: 768px){
-.header ul.clearfix {
-  margin-top: 12px;
-}
-} */

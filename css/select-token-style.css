@@ -281,7 +281,7 @@ button {
   }
 }
 
-@media (min-width: 321px) and (max-width: 450px) {
+@media all and (min-width: 360px) {
 /* Positioning the pop-up-form23 */
   .pop-up-form23 {
     top: 55%;
@@ -291,9 +291,47 @@ button {
     width: 100%;
     border-radius: 20px 20px 0 0;
   }
+}
 
-  
+@media all and (min-width: 375px) {
+    /* Positioning the pop-up-form23 */
+  .pop-up-form23 {
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -44%);
+  }
+}
+
+@media all and (min-width: 375px) {
+    /* Positioning the pop-up-form23 */
+  .pop-up-form23 {
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -44%);
+  }
+
+  .token-listing {
+      max-height: 430px !important;
+  }
+}
+
+@media all and (min-width: 414px) {
+  .token-listing {
+      max-height: 350px !important;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 450px) {  
   .token-listing {
     max-height: 300px;
 }
+}
+
+@media all and (min-width: 576px) {
+    .pop-up-form23 {
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -45%);
+        width: 420px;
+    }
 }

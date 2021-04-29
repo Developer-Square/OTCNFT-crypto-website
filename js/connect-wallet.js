@@ -71,7 +71,7 @@
   }
 
   const MediaQueryChecker = () => {
-    if (screen.width < 450) {
+    if (screen.width < 991) {
       let appbarButtons = document.querySelector('.buttons-container')
       appbarButtons.classList.add('hide-on-mobile')
       console.log('here')
@@ -116,6 +116,7 @@ $(document).ready(function() {
         let popUpForm = document.querySelector('.pop-up-form23')
         // Remove the styling that positions the popup form a bit lower.
         popUpForm.classList.remove('connect-wallet-styling')
+        $(".bottom").show();
         if (lightMode) {
             $("body").removeClass("intro");
           } else {

@@ -78,6 +78,18 @@
     color: var(--primary-color);
 }
 
+@media all and (min-width: 411px) {
+    .connect-wallet-form {
+        height: 550px !important;
+    }
+}
+
+@media all and (min-width: 414px) {
+    .connect-wallet-form {
+        height: 490px !important;
+    }
+}
+
 @media (min-width: 321px) and (max-width: 450px) {
     .connect-wallet-footer {
         font-size: 1.4rem;
