@@ -84,6 +84,9 @@ $(document).ready(function() {
 
     // For the connect wallet popup
     $(".connect-wallet-appbar, .connect-btn").click(function () {
+      // Hide the bottom so that the page does not scroll,
+      // while the popup is visible.
+        $(".bottom").toggle();
         $(".pop-up-form23").toggle();
         $(".connect-wallet-form").toggle();
         $(".Search-form").hide();

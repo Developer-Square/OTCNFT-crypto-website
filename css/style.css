@@ -446,13 +446,6 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
   .header {
     margin-bottom: 30px;
   }
-  .hide-on-mobile {
-    display: none !important;
-  }
-
-  .navbar {
-    margin-bottom: 0;
-  }
 
   nav li {
     display: block;
@@ -486,11 +479,6 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
   .swap-purchase-form{
       max-width:290px;
   }
-
-  /* To make the page scrollable */
-  .bottom {
-    height: 130px;
-  }
   
   button.select-token {
       padding: 8px 8px;
@@ -508,35 +496,51 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
   }
 
   div#Swap, div#Purchase {
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
   }
 
-  .footer-buttons-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  /* Select a span */
+  span.token-span {
+    font-size: 14px;
   }
-
-  .connect-wallet-appbar, .theme-toggle-button {
-    margin-top: 0;
-  }
-
-    /* Select a span */
-    span.token-span {
-      font-size: 14px;
-    }
   }
   
   @media (min-width: 321px) and (max-width: 450px) {
   .swap-purchase-form{
       max-width: 320px;
   }
+
+  img.logo { 
+    width: 45px;
+  }
+
+  .navbar-brand-logo {
+    margin-left: 55px;
+    margin-top: 14px;
+    font-size: 23px;
+  }
+
+  .tabs-container {
+    margin-bottom: 30px;
+  }
+
+  div#Swap, div#Purchase {
+    padding: 13px;
+  }
   
   button.select-token {
       padding: 8px 10px;
+  }
+
+  /* Resizing the padding so that the select token button is in one line */
+  .select-token-container-swap, .select-token-container-purchase, .from-swap-btn, .from-purchase-btn {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .connect-wallet {
+    padding-bottom: 10px;
+    padding-top: 20px;
   }
   }
 
@@ -561,13 +565,30 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
     width: 100%; /* makes it so they are no longer 100px wide and makes them 100% of the <li> which is 50% of the <ul> which is 100% of whatever the screen is */
     
     text-indent: 25px;
-}
+} 
 }
   
 /* Breakpoint of 480px */
 @media only screen and (max-width: 480px) {
+  .header {
+    margin-bottom: 40px;
+  }
+
+  .hide-on-mobile {
+    display: none !important;
+  }
+
   nav {
     border-bottom: 0;
+  }
+
+  .navbar {
+    margin-bottom: 0;
+  }
+
+  .navbar-header {
+    margin-right: auto;
+    padding-top: 0;
   }
   
   nav ul {
@@ -590,6 +611,25 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
     right: 15px;
     top: 10px;
   } 
+
+  
+  .footer-buttons-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  /* To make the page scrollable */
+  .bottom {
+    height: 130px;
+  }
+
+  .connect-wallet-appbar, .theme-toggle-button {
+    margin-top: 0;
+  }
 }
 
 /* @media (min-width: 768px){

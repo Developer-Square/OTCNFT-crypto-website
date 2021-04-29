@@ -329,6 +329,9 @@ $(function () {
     })
 
     $(".ETH, .select-token").click(function (buttonEvt) {
+      // Hide the bottom so that the page does not scroll,
+      // while the popup is visible.
+      $(".bottom").hide();
       // Show the elements that we're hiding when showing the,
       // connect wallet popup
       $(".Search-form").show();
@@ -372,6 +375,7 @@ $(function () {
         removeDarkMode()
       }
       $(".pop-up-form23").hide();
+      $(".bottom").show();
     });
 
     $(".ETH").click(function () {

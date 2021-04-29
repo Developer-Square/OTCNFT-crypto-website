@@ -348,3 +348,13 @@ background: #f7f8fa;
         padding: 10px;
     }
 }
+
+@media (min-width: 321px) and (max-width: 450px) {
+    .pop-up-form33 {
+        width: 320px;
+        top: 59%;
+        left: 45%;
+        transform: translate(-55%, -41%);
+        padding: 10px;
+    }
+}

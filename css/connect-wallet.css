@@ -9,8 +9,8 @@
 }
 
 .connect-wallet-styling {
-    top: 55% !important;
-    transform: translate(-50%, -45%) !important;
+    top: 55%;
+    transform: translate(-50%, -45%);
 }
 
 .connect-wallet-buttons {
@@ -76,4 +76,14 @@
 
 .dark-mode-footer {
     color: var(--primary-color);
+}
+
+@media (min-width: 321px) and (max-width: 450px) {
+    .connect-wallet-footer {
+        font-size: 1.4rem;
+    }
+    
+    .connect-wallet-form {
+        height: 420px;
+    }
 }
