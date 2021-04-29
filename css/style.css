@@ -450,6 +450,16 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
     display: none !important;
   }
 
+  .navbar {
+    margin-bottom: 0;
+  }
+
+  nav li {
+    display: block;
+    float: none;
+    width: 100%;
+}
+
   .navbar-header {
     margin-right: auto;
     padding-top: 0;
@@ -475,7 +485,11 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
 
   .swap-purchase-form{
       max-width:290px;
-      margin-bottom: 120px;
+  }
+
+  /* To make the page scrollable */
+  .bottom {
+    height: 130px;
   }
   
   button.select-token {
@@ -509,6 +523,11 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
   .connect-wallet-appbar, .theme-toggle-button {
     margin-top: 0;
   }
+
+    /* Select a span */
+    span.token-span {
+      font-size: 14px;
+    }
   }
   
   @media (min-width: 321px) and (max-width: 450px) {
@@ -521,13 +540,6 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
   }
   }
 
-/* Breakpoint of 600px */
-@media all and (max-width: 414px) {
-  /* Select a span */
-  span.token-span {
-    font-size: 14px;
-  }
-}
 @media screen and (max-width: 600px) {
   nav { 
     height: auto;
@@ -580,18 +592,8 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
   } 
 }
 
-@media (min-width: 768px){
+/* @media (min-width: 768px){
 .header ul.clearfix {
   margin-top: 12px;
 }
-}
-  
-/* Breakpoint of 320px */
-  
-@media (max-width: 320px) {
-  nav li {
-    display: block;
-    float: none;
-    width: 100%;
-}
-}
+} */

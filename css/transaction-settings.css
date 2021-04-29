@@ -339,3 +339,12 @@ background: #f7f8fa;
     background: var(--darkmode-themebutton-background) !important;
 }
 
+@media all and (max-width: 320px) {
+    .pop-up-form33 {
+        width: 290px;
+        top: 61%;
+        left: 45%;
+        transform: translate(-55%, -39%);
+        padding: 10px;
+    }
+}

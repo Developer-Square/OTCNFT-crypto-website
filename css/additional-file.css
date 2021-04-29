@@ -54,11 +54,11 @@
       flex-direction: column;
       font-size: 1rem;
       position: absolute;
-      top: 35%;
-      right: 0;
+      /* top: 35%;
+      right: 0; */
       z-index: 100;
-      padding: 20px;
-      left: 0;
+      /* padding: 20px; */
+      /* left: 0; */
     }
 
     section.transaction-settings.pop-up-form33 {
