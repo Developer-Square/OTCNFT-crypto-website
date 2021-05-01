@@ -329,19 +329,10 @@ button {
 
 @media all and (min-width: 576px) {
     .pop-up-form23 {
-        top: 55%;
+        top: 53%;
         left: 50%;
-        transform: translate(-50%, -45%);
+        transform: translate(-50%, -47%);
         width: 420px;
-    }
-}
-
-@media all and (min-width: 768px) {
-    .pop-up-form23 {
-        top: 55%;
-        left: 50%;
-        transform: translate(-50%, -45%);
-        border-radius: 20px;
     }
 }
 
@@ -350,9 +341,6 @@ button {
         top: 53%;
         left: 50%;
         transform: translate(-50%, -47%);
-    }
-
-    .token-listing {
-        max-height: 505px !important;
+        border-radius: 20px;
     }
 }

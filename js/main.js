@@ -8,6 +8,10 @@ let navbarBrand = document.querySelector('.navbar-brand')
 let connectWalletBtnAppBar = document.querySelectorAll('.connect-wallet-appbar')
 let navbarLinks = document.querySelectorAll('.nav-link')
 let themeButton = document.querySelectorAll('.theme-toggle-button')
+let mobileFooter = document.querySelector('.mobile-footer')
+let inputBorder = document.querySelectorAll('.form-input')
+
+
 
 
 
@@ -235,7 +239,6 @@ function toggleTabs(evt, cityName) {
  
   const switchToDarkMode = () => {
       let body = document.getElementsByTagName('body')
-      let mobileFooter = document.querySelector('.mobile-footer')
       let appBarLogo = document.querySelector('.navbar-brand-logo')
       let swapPurchaseForm = document.querySelector('.swap-purchase-form')
       let formFields = document.querySelectorAll('.form-field')
@@ -250,7 +253,6 @@ function toggleTabs(evt, cityName) {
       let tabContainer = document.querySelector('.tabs-container')
       let popUpForm23 = document.querySelector('.pop-up-form23')
       let tabIcontitle = document.querySelector('.title')
-      let inputBorder = document.querySelector('.form-input')
       let footerManage = document.querySelector('.footer-manage')
       let closeIcon = document.querySelector('.close-icon')
 
@@ -262,7 +264,6 @@ function toggleTabs(evt, cityName) {
         'dark-mode-tab-container',
         'dark-mode-pop-up-form-23',
         'dark-mode-form-title',
-        'dark-mode-input-border',
         'dark-mode-pop-up-form-23',
         'dark-mode-form-title',
         'dark-mode-form'
@@ -276,7 +277,6 @@ function toggleTabs(evt, cityName) {
       tabContainer,
       popUpForm23,
       tabIcontitle,
-      inputBorder,
       footerManage,
       closeIcon,
       mobileFooter
@@ -300,6 +300,7 @@ function toggleTabs(evt, cityName) {
       toggleNodeListClasses(tokenTitle, 'dark-mode-token-title')
       toggleNodeListClasses(tokenIcon, 'dark-mode-token-icon')
       toggleNodeListClasses(connectWalletBtns, 'dark-mode-connectbtn')
+      toggleNodeListClasses(inputBorder, 'dark-mode-input-border')
   }
 
   const toggleNodeListAttributes = (nodeList, attribute, value) => {
@@ -350,6 +351,8 @@ function toggleTabs(evt, cityName) {
       navbar.classList.add('dark-mode-opacity')
       navbarBrand.setAttribute('disabled', true)
       toggleNodeListAttributes(connectWalletBtnAppBar, 'disabled', true)
+      mobileFooter.style.display = 'none'
+
       toggleNodeListAttributes(navbarLinks, 'disabled', true)
       toggleNodeListAttributes(themeButton, 'disabled', true)
     } else if (action === 'close') {
@@ -358,6 +361,7 @@ function toggleTabs(evt, cityName) {
       toggleNodeListAttributes(connectWalletBtnAppBar, 'disabled', false)
       toggleNodeListAttributes(navbarLinks, 'disabled', false)
       toggleNodeListAttributes(themeButton, 'disabled', false)
+      mobileFooter.style.display = 'block'
     }
   }
 
