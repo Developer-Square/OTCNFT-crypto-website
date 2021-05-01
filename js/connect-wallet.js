@@ -74,16 +74,19 @@
     if (screen.width < 991) {
       let appbarButtons = document.querySelector('.buttons-container')
       appbarButtons.classList.add('hide-on-mobile')
-      console.log('here')
     } 
   }
 
 $(document).ready(function() {
     $('.connect-wallet-form').hide()
     MediaQueryChecker()
-
     // For the connect wallet popup
-    $(".connect-wallet-appbar, .connect-btn").click(function () {
+    $(".connect-wallet-appbar, .connect-btn").click(function (evt) {
+      evt.stopPropagation()
+      // Popup form is visible.
+      popUpFormVisible = true;
+      hideForms()
+
       // Hide the bottom so that the page does not scroll,
       // while the popup is visible.
         $(".bottom").toggle();
@@ -92,6 +95,8 @@ $(document).ready(function() {
         $(".Search-form").hide();
         $(".token-listing").hide();
         $(".footer-manage").hide();
+        // Reduce the opacity of all other elements and disable them.
+        addOverlay('open')
         let popUpForm = document.querySelector('.pop-up-form23')
 
         // Add the styling that positions the popup form a bit lower.
@@ -112,7 +117,10 @@ $(document).ready(function() {
         });
 
     $(".close-icon").click(function () {
+        popUpFormVisible = false
         $(".connect-wallet-form").hide();
+        // Reduce the opacity of all other elements and disable them.
+        addOverlay('close')
         let popUpForm = document.querySelector('.pop-up-form23')
         // Remove the styling that positions the popup form a bit lower.
         popUpForm.classList.remove('connect-wallet-styling')

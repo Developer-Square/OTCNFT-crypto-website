@@ -127,7 +127,6 @@ button.ETH {
 }
 span.eth-title {
     margin: 0px 0.25rem 0px 0.75rem;
-    font-size: 22px;
     color: #000;
     font-weight: 600;
 }
@@ -387,6 +386,10 @@ body.dark-mode-intro {
   background-color: var(--darkmode-overlay-background);
 }
 
+.dark-mode-opacity {
+  opacity: 0.6;
+}
+
 .dark-mode-connect-wallet-appbar {
   background: var(--darkmode-connectbutton-background);
   border: none;
@@ -460,19 +463,27 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
   .navbar-brand-logo {
     margin-left: 55px;
     margin-top: 10px;
-    font-size: 22px;
+    font-size: 21px;
   }
 
-  .navbar-default {
-    border: none;
+  .navbar ul li a {
+    font-size: 1.6rem;
   }
 
   .tabs-container {
     margin-bottom: 20px;
   }
 
+  .tabs-toggle-buttons {
+    font-size: 1.4rem;
+  }
+
   .swap-purchase-form{
       max-width:290px;
+  }
+
+  span.eth-title {
+    font-size: 1.8rem;
   }
   
   button.select-token {
@@ -488,6 +499,10 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
   .connect-wallet {
     padding-bottom: 5px;
     padding-top: 20px;
+  }
+
+  .connect-wallet-appbar {
+    font-size: 1.7rem;
   }
 
   div#Swap, div#Purchase {
@@ -506,13 +521,25 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
       margin-bottom: 30px;
     }
 
+    .navbar ul li a {
+      font-size: 1.6rem;
+    }
+  
+
     .swap-purchase-form{
       max-width: 320px;
     }
 
-    
     .ETH {
       margin-left: 15%;
+    }
+
+    .connect-wallet-appbar {
+      font-size: 1.7rem;
+    }
+    
+    span.eth-title {
+      font-size: 1.9rem;
     }
 
     .select-token {
@@ -619,10 +646,6 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
     right: 15px;
     top: 10px;
   }
-
-  .connect-wallet-appbar, .theme-toggle-button {
-    margin-top: 0;
-  }
 }
 
 @media all and (min-width: 576px) {
@@ -635,7 +658,7 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
   }
 
   .navbar ul li a {
-    font-size: 17px;
+    font-size: 1.7rem;
   }
 
   .navbar-brand-logo {
@@ -668,6 +691,18 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
 .navbar-nav {
   margin-left: 45%;
 }
+
+.ETH {
+  margin-left: 22%;
+}
+
+span.eth-title {
+  font-size: 1.9rem;
+}
+
+.tab-toggle-buttons {
+  font-size: 1.6rem;
+}
 }
 
 @media screen and (max-width: 600px) {
@@ -698,6 +733,10 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
 @media all and (max-width: 991px) {
   .hide-on-mobile {
     display: none !important;
+  }
+
+  .connect-wallet-appbar, .theme-toggle-button {
+    margin-top: 0;
   }
 
   .footer-buttons-container {

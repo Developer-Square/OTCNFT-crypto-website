@@ -1,6 +1,14 @@
 let page;
 let buttonClicked;
 let lightMode = true;
+let popUpFormVisible = false;
+
+let navbar = document.querySelector('.navbar')
+let navbarBrand = document.querySelector('.navbar-brand')
+let connectWalletBtnAppBar = document.querySelectorAll('.connect-wallet-appbar')
+let navbarLinks = document.querySelectorAll('.nav-link')
+let themeButton = document.querySelectorAll('.theme-toggle-button')
+
 
 
 // Read the json file with the token list and display it,
@@ -73,8 +81,8 @@ const setSecondTokenButton = (imageUrl, titleText, imgClassName, titleClassName)
   let selectPurchaseTokenButton = document.querySelector('.select-token-container-purchase')
   let swapTokenButton = document.querySelector('.to-swap')
   let purchaseTokenButton = document.querySelector('.to-purchase')
-  let toSwapInput = document.querySelector('.to-input-swap')
-  let toPurchaseInput = document.querySelector('.to-input')
+  // let toSwapInput = document.querySelector('.to-input-swap')
+  // let toPurchaseInput = document.querySelector('.to-input')
   let swapTokenIcon = document.querySelector('.to-swap-image')
   let swapTokenTitle = document.querySelector('.to-swap-title')
   let purchaseTokenIcon = document.querySelector('.to-purchase-image')
@@ -150,6 +158,7 @@ const setSecondTokenButton = (imageUrl, titleText, imgClassName, titleClassName)
 
 // Set the chosen token to the page.
 const setTokens = (evt) => {
+  console.log(evt.currentTarget)
     let swapFromImg = document.querySelector('.from-swap-image')
     let purchaseFromImg = document.querySelector('.from-purchase-image')
     let swapFromTitle = document.querySelector('.from-swap-title')
@@ -214,8 +223,8 @@ function toggleTabs(evt, cityName) {
     }
   }
 
-  const toggleClass = (elemement, className) => {
-    elemement.classList.toggle(className)
+  const toggleClass = (element, className) => {
+    element.classList.toggle(className)
   }
 
   // Helper function to help toggle classes in a node list
@@ -225,11 +234,9 @@ function toggleTabs(evt, cityName) {
   }
  
   const switchToDarkMode = () => {
-      let themeButton = document.querySelector('.theme-toggle-button')
       let body = document.getElementsByTagName('body')
-      let connectWalletBtnAppBar = document.querySelector('.connect-wallet-appbar')
+      let mobileFooter = document.querySelector('.mobile-footer')
       let appBarLogo = document.querySelector('.navbar-brand-logo')
-      let navbarLinks = document.querySelectorAll('.appbar-links')
       let swapPurchaseForm = document.querySelector('.swap-purchase-form')
       let formFields = document.querySelectorAll('.form-field')
       let formTitles = document.querySelectorAll('#form-title')
@@ -248,8 +255,7 @@ function toggleTabs(evt, cityName) {
       let closeIcon = document.querySelector('.close-icon')
 
       let toggleClassNames = [
-        'dark-mode-theme-button', 
-        'dark-mode-connect-wallet-appbar',
+        'navbar-dark',
         'dark-mode-app-logo',
         'dark-mode-form',
         'dark-mode-setting-icon',
@@ -258,12 +264,12 @@ function toggleTabs(evt, cityName) {
         'dark-mode-form-title',
         'dark-mode-input-border',
         'dark-mode-pop-up-form-23',
-        'dark-mode-form-title'
+        'dark-mode-form-title',
+        'dark-mode-form'
     ]
 
     let toggleElements = [
-      themeButton,
-      connectWalletBtnAppBar,
+      navbar,
       appBarLogo,
       swapPurchaseForm,
       settingIcon,
@@ -272,7 +278,8 @@ function toggleTabs(evt, cityName) {
       tabIcontitle,
       inputBorder,
       footerManage,
-      closeIcon
+      closeIcon,
+      mobileFooter
     ]
 
     // Map over both arrays and add toggle classes to all,
@@ -282,6 +289,8 @@ function toggleTabs(evt, cityName) {
     })
 
       body[0].classList.toggle('dark-mode-body')
+      toggleNodeListClasses(themeButton, 'dark-mode-theme-button')
+      toggleNodeListClasses(connectWalletBtnAppBar, 'dark-mode-connect-wallet-appbar')
       toggleNodeListClasses(navbarLinks, 'dark-mode-appbar-links')
       toggleNodeListClasses(formTitles, 'dark-mode-form-title')
       toggleNodeListClasses(inputTitles, 'dark-mode-input-title')
@@ -293,6 +302,60 @@ function toggleTabs(evt, cityName) {
       toggleNodeListClasses(connectWalletBtns, 'dark-mode-connectbtn')
   }
 
+  const toggleNodeListAttributes = (nodeList, attribute, value) => {
+    if (value) {
+      Array.from(nodeList).map(item => {
+        item.setAttribute(attribute, value)
+      })
+    } else {
+      Array.from(nodeList).map(item => {
+        item.removeAttribute(attribute)
+      })
+    }
+  }
+
+  // Hide the pop-up forms when a user clicks,
+  // outside the form.
+  const hideForms = () => {
+    if (popUpFormVisible) {
+      $(window).click(function () {
+        $(".pop-up-form23").hide();
+        $(".pop-up-form33").hide();
+        $(".pop-up-form34").hide();
+        // Reduce the opacity of all other elements and disable them.
+        addOverlay('close')
+        $(".connect-wallet-form").hide();
+        // Reduce the opacity of all other elements and disable them.
+        addOverlay('close')
+        let popUpForm = document.querySelector('.pop-up-form23')
+        // Remove the styling that positions the popup form a bit lower.
+        popUpForm.classList.remove('connect-wallet-styling')
+        $(".bottom").show();
+        if (lightMode) {
+          $("body").removeClass("intro");
+        } else {
+          removeDarkMode()
+          $("body").removeClass("dark-mode-intro")
+        }
+      })
+    }
+  }
+
+  const addOverlay = (action) => {
+    if (action === 'open') {
+      navbar.classList.add('dark-mode-opacity')
+      navbarBrand.setAttribute('disabled', true)
+      toggleNodeListAttributes(connectWalletBtnAppBar, 'disabled', true)
+      toggleNodeListAttributes(navbarLinks, 'disabled', true)
+      toggleNodeListAttributes(themeButton, 'disabled', true)
+    } else if (action === 'close') {
+      navbar.classList.remove('dark-mode-opacity')
+      navbarBrand.removeAttribute('disabled')
+      toggleNodeListAttributes(connectWalletBtnAppBar, 'disabled', false)
+      toggleNodeListAttributes(navbarLinks, 'disabled', false)
+      toggleNodeListAttributes(themeButton, 'disabled', false)
+    }
+  }
 
   
 // Get the element with id="defaultOpen" and click on it
@@ -326,9 +389,12 @@ $(function () {
     $('.token-button-container-purchase').hide();  
     $('.dark').hide();  
 
-    $('.theme-toggle-button').click(function () {
-      
-      // Switcht between the light and dark icons
+    $('.theme-toggle-button').click(function (evt) {
+      // To nullify the $(window).click from the hideForms(),
+      // function.
+      evt.stopPropagation()
+    
+      // Switch between the light and dark icons
       if (lightMode) {
         $('.light').hide()
         $('.dark').show()
@@ -342,12 +408,18 @@ $(function () {
     })
 
     $(".ETH, .select-token").click(function (buttonEvt) {
+      buttonEvt.stopPropagation()
+      // Popup form is visible.
+      popUpFormVisible = true;
+      hideForms()
       if (lightMode) {
         $("body").addClass("intro");
       } else {
         $("body").addClass("dark-mode-intro")
       }
-      // Hide the bottom so that the page does not scroll,
+      // Reduce the opacity of all other elements and disable them.
+      addOverlay('open')
+      // Hide the bottom so that the page does not scroll on mobile screens,
       // while the popup is visible.
       $(".bottom").hide();
       // Show the elements that we're hiding when showing the,
@@ -374,6 +446,9 @@ $(function () {
       $(".select-otion").click(function (evt) {
         $(".pop-up-form23").hide();
         $(".bottom").show();
+        popUpFormVisible = false
+        // Return elments to original opacity
+        addOverlay('close')
         // Decide which button to show depending on which page,
         // the user is on.
         if (buttonClicked.includes('to-purchase')) {
@@ -397,14 +472,9 @@ $(function () {
       }
       $(".pop-up-form23").hide();
       $(".bottom").show();
-    });
-
-    $(".ETH").click(function () {
-      if (lightMode) {
-        $("body").addClass("intro");
-      } else {
-        $("body").addClass("dark-mode-intro")
-      }
+      popUpFormVisible = false;
+      // Return elments to original opacity
+      addOverlay('close')
     });
 
     $(".close-icon").click(function () {

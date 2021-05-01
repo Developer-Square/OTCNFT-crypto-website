@@ -352,9 +352,9 @@ background: #f7f8fa;
 @media all and (min-width: 360px) {
     .pop-up-form33 {
         width: 320px;
-        top: 59%;
-        left: 45%;
-        transform: translate(-55%, -41%);
+        top: 55%;
+        left: 46%;
+        transform: translate(-54%, -41%);
         padding: 10px;
     }
 }
