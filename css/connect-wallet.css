@@ -78,9 +78,31 @@
     color: var(--primary-color);
 }
 
+@media all and (max-width: 320px) {
+    .connect-wallet-styling {
+        top: 55% !important;
+        transform: translate(-50%, -45%) !important;
+    }    
+}
+
+@media all and (min-width: 360px) {
+    .connect-wallet-styling {
+        top: 56% !important;
+        transform: translate(-50%, -44%) !important;
+    } 
+}
+
+@media all and (min-width: 375px) {
+    .connect-wallet-styling {
+        top: 57% !important;
+        transform: translate(-50%, -43%) !important;
+    } 
+}
+
 @media all and (min-width: 411px) {
-    .connect-wallet-form {
-        height: 550px !important;
+    .connect-wallet-styling {
+        top: 59% !important;
+        transform: translate(-50%, -41%) !important;
     }
 }
 

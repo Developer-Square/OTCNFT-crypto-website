@@ -87,30 +87,37 @@ const addExpertFormDarkMode = () => {
 }
 
 $(document).ready(function() {
-    // Hide the setting popup form when a user clicks elsewhere.
-    // Todo: Make it work.
-    $("pop-up-form33").on('focusout', function() {
-    $(this).hide()
-    })
 
-
-    $(".setting-icon").click(function () {
-        $(".pop-up-form33").toggle().focus();
+    $(".setting-icon").click(function (evt) {
+        evt.stopPropagation()
+        // Popup form is visible.
+        popUpFormVisible = true;
+        hideForms('.pop-up-form33')
+        $(".pop-up-form33").toggle();
         addTransactionFormDakMode();
     });
 
-    $(".on-function").click(function () {
+    $(".on-function").click(function (evt) {
+        evt.stopPropagation()
+        // Popup form is visible.
+        popUpFormVisible = true;
+        hideForms('.pop-up-form34')
         $(".pop-up-form34").show();
         $(".pop-up-form33").hide();
         addExpertFormDarkMode();
     });
 
-    $(".off-function").click(function () {
+    $(".off-function").click(function (evt) {
+        evt.stopPropagation()
+        // Popup form is visible.
+        popUpFormVisible = true;
+        hideForms('.pop-up-form34')
         $(".pop-up-form34").show();
         $(".pop-up-form33").hide();
     });
 
     $(".close-icon").click(function () {
+        popUpFormVisible = false;
         $(".pop-up-form34").hide();
     });
 })

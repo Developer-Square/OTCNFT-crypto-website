@@ -85,7 +85,7 @@ $(document).ready(function() {
       evt.stopPropagation()
       // Popup form is visible.
       popUpFormVisible = true;
-      hideForms()
+      hideForms('.pop-up-form23')
 
       // Hide the bottom so that the page does not scroll,
       // while the popup is visible.
@@ -93,6 +93,7 @@ $(document).ready(function() {
         $(".pop-up-form23").toggle();
         $(".connect-wallet-form").toggle();
         $(".Search-form").hide();
+        $(".second-search-field").hide();
         $(".token-listing").hide();
         $(".footer-manage").hide();
         // Reduce the opacity of all other elements and disable them.

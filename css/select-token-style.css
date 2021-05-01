@@ -239,9 +239,9 @@ button {
 @media all and (max-width: 320px) {
 /* Positioning the pop-up-form23 */
   .pop-up-form23 {
-    top: 55%;
+    top: 53%;
     left: 50%;
-    transform: translate(-50%, -45%);
+    transform: translate(-50%, -47%);
     max-width: none;
     width: 100%;
     border-radius: 20px 20px 0 0;
@@ -268,7 +268,7 @@ button {
   }
 
   .token-listing {
-      max-height: 270px;
+      max-height: 230px;
   }
 
   .connect-wallet-buttons {
@@ -284,9 +284,9 @@ button {
 @media all and (min-width: 360px) {
 /* Positioning the pop-up-form23 */
   .pop-up-form23 {
-    top: 55%;
+    top: 53%;
     left: 50%;
-    transform: translate(-50%, -45%);
+    transform: translate(-50%, -47%);
     max-width: none;
     width: 100%;
     border-radius: 20px 20px 0 0;
@@ -305,25 +305,25 @@ button {
 @media all and (min-width: 375px) {
     /* Positioning the pop-up-form23 */
   .pop-up-form23 {
-    top: 56%;
+    top: 54%;
     left: 50%;
-    transform: translate(-50%, -44%);
+    transform: translate(-50%, -46%);
   }
+}
 
+@media all and (min-width: 411px) {
+    /* Positioning the pop-up-form23 */
   .token-listing {
-      max-height: 430px !important;
+      max-height: 325px !important;
   }
 }
 
 @media all and (min-width: 414px) {
-  .token-listing {
-      max-height: 350px !important;
-  }
 }
 
 @media (min-width: 321px) and (max-width: 450px) {  
   .token-listing {
-    max-height: 300px;
+    max-height: 260px;
 }
 }
 

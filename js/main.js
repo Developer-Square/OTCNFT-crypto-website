@@ -316,27 +316,31 @@ function toggleTabs(evt, cityName) {
 
   // Hide the pop-up forms when a user clicks,
   // outside the form.
-  const hideForms = () => {
+  const hideForms = (element) => {
     if (popUpFormVisible) {
-      $(window).click(function () {
-        $(".pop-up-form23").hide();
-        $(".pop-up-form33").hide();
-        $(".pop-up-form34").hide();
-        // Reduce the opacity of all other elements and disable them.
-        addOverlay('close')
-        $(".connect-wallet-form").hide();
-        // Reduce the opacity of all other elements and disable them.
-        addOverlay('close')
-        let popUpForm = document.querySelector('.pop-up-form23')
-        // Remove the styling that positions the popup form a bit lower.
-        popUpForm.classList.remove('connect-wallet-styling')
-        $(".bottom").show();
-        if (lightMode) {
-          $("body").removeClass("intro");
-        } else {
-          removeDarkMode()
-          $("body").removeClass("dark-mode-intro")
-        }
+      $(document).click(function(event) { 
+        var $target = $(event.target);
+        if(!$target.closest(element).length && 
+        $(element).is(":visible")) {
+          $(".pop-up-form23").hide();
+          $(".pop-up-form33").hide();
+          $(".pop-up-form34").hide();
+          // Reduce the opacity of all other elements and disable them.
+          addOverlay('close')
+          $(".connect-wallet-form").hide();
+          // Reduce the opacity of all other elements and disable them.
+          addOverlay('close')
+          let popUpForm = document.querySelector('.pop-up-form23')
+          // Remove the styling that positions the popup form a bit lower.
+          popUpForm.classList.remove('connect-wallet-styling')
+          $(".bottom").show();
+          if (lightMode) {
+            $("body").removeClass("intro");
+          } else {
+            removeDarkMode()
+            $("body").removeClass("dark-mode-intro")
+          }
+        }        
       })
     }
   }
@@ -411,7 +415,7 @@ $(function () {
       buttonEvt.stopPropagation()
       // Popup form is visible.
       popUpFormVisible = true;
-      hideForms()
+      hideForms('.pop-up-form23')
       if (lightMode) {
         $("body").addClass("intro");
       } else {
@@ -425,6 +429,7 @@ $(function () {
       // Show the elements that we're hiding when showing the,
       // connect wallet popup
       $(".Search-form").show();
+      $(".second-search-field").show();
       $(".token-listing").show();
       $(".footer-manage").show();
       let popUpForm = document.querySelector('.pop-up-form23')
