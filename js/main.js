@@ -10,6 +10,8 @@ let navbarLinks = document.querySelectorAll('.nav-link')
 let themeButton = document.querySelectorAll('.theme-toggle-button')
 let mobileFooter = document.querySelector('.mobile-footer')
 let inputBorder = document.querySelectorAll('.form-input')
+let fromSwapBtn = document.querySelectorAll('.from-swap-btn')
+
 
 
 
@@ -17,8 +19,7 @@ let inputBorder = document.querySelectorAll('.form-input')
 
 // Read the json file with the token list and display it,
 // onclick of the button
-const loadTokens = (buttonClickedClassName) => {
-  buttonClicked = buttonClickedClassName
+const loadTokens = () => {
 
   let tokenContainer = document.querySelector('#token-container')
 
@@ -83,19 +84,16 @@ const removeDarkMode = () => {
 const setSecondTokenButton = (imageUrl, titleText, imgClassName, titleClassName) => {
   let selectSwapTokenButton = document.querySelector('.select-token-container-swap')
   let selectPurchaseTokenButton = document.querySelector('.select-token-container-purchase')
-  let swapTokenButton = document.querySelector('.to-swap')
-  let purchaseTokenButton = document.querySelector('.to-purchase')
-  // let toSwapInput = document.querySelector('.to-input-swap')
-  // let toPurchaseInput = document.querySelector('.to-input')
+  let swapTokenButton = document.querySelector('.to-swap-icon')
+  let swapTokenButton2 = document.querySelector('.contract-icon')
+  let purchaseTokenButton = document.querySelector('.to-purchase-icon')
   let swapTokenIcon = document.querySelector('.to-swap-image')
   let swapTokenTitle = document.querySelector('.to-swap-title')
   let purchaseTokenIcon = document.querySelector('.to-purchase-image')
   let purchaseTokenTitle = document.querySelector('.to-purchase-title')
-  let fromSwapBtn = document.querySelector('.from-swap-btn')
   let fromPurchaseBtn = document.querySelector('.from-purchase-btn')
   let tokenButtonContainerSwap = document.querySelector('.token-button-container-swap')
   let tokenButtonContainerPurchase = document.querySelector('.token-button-container-purchase')
-
 
   if (buttonClicked.includes('to-swap')) {
     // Hide the 'select a token' button.
@@ -109,7 +107,7 @@ const setSecondTokenButton = (imageUrl, titleText, imgClassName, titleClassName)
   if (swapTokenIcon && swapTokenTitle && buttonClicked.includes('to-swap')) {
     swapTokenIcon.src = imageUrl
     swapTokenTitle.innerHTML = titleText
-  } else if (purchaseTokenIcon && purchaseTokenTitle && buttonClicked.includes('to-purchase')) {
+  } else if (purchaseTokenIcon && purchaseTokenTitle) {
     purchaseTokenIcon.src = imageUrl
     purchaseTokenTitle.innerHTML = titleText
   } else {
@@ -141,17 +139,14 @@ const setSecondTokenButton = (imageUrl, titleText, imgClassName, titleClassName)
     // page the user is on.
     if (buttonClicked.includes('to-swap')) {
       swapTokenButton.appendChild(textContainer)
-      // Make the input in the 'to section' larger as we make the button smaller.
-      // toSwapInput.className = `${screen.width < 375 ? 'col-6' : 'col-md-7'} to-swap-input`
-      fromSwapBtn.className ='col-6 col-md-5 from-swap-btn'
+      Array.from(fromSwapBtn).map(btn => {
+        btn.className = 'col-6 col-md-5 from-swap-btn'
+      })
 
       // Make the button smaller.
       tokenButtonContainerSwap.classList.add('col-6')
-
     } else if (buttonClicked.includes('to-purchase')) {
       purchaseTokenButton.appendChild(textContainer)
-      // Make the input in the 'to section' larger as we make the button smaller.
-      // toPurchaseInput.className = `${screen.width < 375 ? 'col-5' : 'col-md-7'} to-input`
       fromPurchaseBtn.className = 'col-6 col-md-5 from-purchase-btn'
       // Make the button smaller.
       tokenButtonContainerPurchase.classList.add('col-6')
@@ -162,7 +157,6 @@ const setSecondTokenButton = (imageUrl, titleText, imgClassName, titleClassName)
 
 // Set the chosen token to the page.
 const setTokens = (evt) => {
-  console.log(evt.currentTarget)
     let swapFromImg = document.querySelector('.from-swap-image')
     let purchaseFromImg = document.querySelector('.from-purchase-image')
     let swapFromTitle = document.querySelector('.from-swap-title')
@@ -365,6 +359,9 @@ function toggleTabs(evt, cityName) {
     }
   }
 
+  // const startUp = () => {
+  // }
+
   
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
@@ -441,7 +438,8 @@ $(function () {
       popUpForm.classList.remove('connect-wallet-styling')
       let popUpFormTitle = document.querySelector('.pop-up-form-title')
       popUpFormTitle.innerHTML = 'Select a token'
-      const buttonClicked = buttonEvt.currentTarget.className
+      const currentButtonClicked = buttonEvt.currentTarget.className
+      buttonClicked = currentButtonClicked;
 
       $(".pop-up-form23").show();
 
@@ -450,9 +448,10 @@ $(function () {
       if (ethTitle && !lightMode) {
         addDarkMode()
       } else {
-        loadTokens(buttonClicked)
+        loadTokens()
       }
       $(".select-otion").click(function (evt) {
+        evt.stopPropagation()
         $(".pop-up-form23").hide();
         $(".bottom").show();
         popUpFormVisible = false
@@ -464,6 +463,8 @@ $(function () {
           $('.token-button-container-purchase').show();
         } else if (buttonClicked.includes('to-swap')) {
           $('.token-button-container-swap').show();  
+        } else if (buttonClicked.includes('to-contract-btn')) {
+          $('.token-button-container-swap-2').show();  
         }
         if (lightMode) {
           $("body").removeClass("intro");

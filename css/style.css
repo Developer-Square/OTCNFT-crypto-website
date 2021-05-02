@@ -98,10 +98,7 @@ div#Swap {
     padding: 20px;
     margin-top: 30px;
 }
-/*
-.swap-tab {
-    border-right: 1px solid #e5e5e5 !important;
-}*/
+
 span.arrow-span {
     color: #606472;
 }
@@ -530,10 +527,6 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
       max-width: 320px;
     }
 
-    .ETH {
-      margin-left: 15%;
-    }
-
     .connect-wallet-appbar {
       font-size: 1.7rem;
     }
@@ -541,23 +534,11 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
     span.eth-title {
       font-size: 1.9rem;
     }
-
-    .select-token {
-      margin-left: 5%;
-    }
   }
 
   @media all and (min-width: 375px) {
     .swap-purchase-form{
       max-width: 350px;
-    }
-
-    .ETH {
-      margin-left: 25%;
-    }
-
-    .select-token {
-      margin-left: 15%;
     }
   }
 
@@ -690,10 +671,6 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
 
 .navbar-nav {
   margin-left: 45%;
-}
-
-.ETH {
-  margin-left: 22%;
 }
 
 span.eth-title {

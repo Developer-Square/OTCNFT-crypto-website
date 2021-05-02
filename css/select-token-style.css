@@ -338,9 +338,9 @@ button {
 
 @media all and (min-width: 992px) {
     .pop-up-form23 {
-        top: 53%;
+        top: 53% !important; 
         left: 50%;
-        transform: translate(-50%, -47%);
+        transform: translate(-50%, -47%) !important;
         border-radius: 20px;
     }
 }
