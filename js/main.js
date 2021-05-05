@@ -10,7 +10,8 @@ let navbarLinks = document.querySelectorAll('.nav-link')
 let themeButton = document.querySelectorAll('.theme-toggle-button')
 let mobileFooter = document.querySelector('.mobile-footer')
 let inputBorder = document.querySelectorAll('.form-input')
-let fromSwapBtn = document.querySelectorAll('.from-swap-btn')
+let fromSwapBtn = document.querySelector('.from-swap-btn')
+let toSwapBtn = document.querySelector('.to-swap-btn')
 
 
 
@@ -83,21 +84,27 @@ const removeDarkMode = () => {
 // Changes 'select-token' button to a button with actual currency.
 const setSecondTokenButton = (imageUrl, titleText, imgClassName, titleClassName) => {
   let selectSwapTokenButton = document.querySelector('.select-token-container-swap')
+  let selectSecondSwapButton = document.querySelector('.select-token-second-swap')
   let selectPurchaseTokenButton = document.querySelector('.select-token-container-purchase')
   let swapTokenButton = document.querySelector('.to-swap-icon')
-  let swapTokenButton2 = document.querySelector('.contract-icon')
+  let swapSecondTokenButton = document.querySelector('.from-swap-icon')
   let purchaseTokenButton = document.querySelector('.to-purchase-icon')
   let swapTokenIcon = document.querySelector('.to-swap-image')
+  let swapSecondTokenIcon = document.querySelector('.from-swap-second-image')
   let swapTokenTitle = document.querySelector('.to-swap-title')
+  let swapSecondTokenTitle = document.querySelector('.from-swap-second-title')
   let purchaseTokenIcon = document.querySelector('.to-purchase-image')
   let purchaseTokenTitle = document.querySelector('.to-purchase-title')
   let fromPurchaseBtn = document.querySelector('.from-purchase-btn')
   let tokenButtonContainerSwap = document.querySelector('.token-button-container-swap')
+  let tokenSecondContainerSwap = document.querySelector('.token-second-container-swap')
   let tokenButtonContainerPurchase = document.querySelector('.token-button-container-purchase')
 
   if (buttonClicked.includes('to-swap')) {
     // Hide the 'select a token' button.
     selectSwapTokenButton.style.display = 'none'
+  } else if (buttonClicked.includes('from-second-swap')) {
+    selectSecondSwapButton.style.display = 'none'
   } else if (buttonClicked.includes('to-purchase')) {
     selectPurchaseTokenButton.style.display = 'none'
   }
@@ -107,6 +114,9 @@ const setSecondTokenButton = (imageUrl, titleText, imgClassName, titleClassName)
   if (swapTokenIcon && swapTokenTitle && buttonClicked.includes('to-swap')) {
     swapTokenIcon.src = imageUrl
     swapTokenTitle.innerHTML = titleText
+  } else if (swapSecondTokenIcon && swapSecondTokenTitle && buttonClicked.includes('from-swap-icon')) {
+    swapSecondTokenIcon.src = imageUrl
+    swapSecondTokenTitle.innerHTML = titleText
   } else if (purchaseTokenIcon && purchaseTokenTitle) {
     purchaseTokenIcon.src = imageUrl
     purchaseTokenTitle.innerHTML = titleText
@@ -137,14 +147,20 @@ const setSecondTokenButton = (imageUrl, titleText, imgClassName, titleClassName)
     textContainer.appendChild(icon)
     // Place the button on the page depending on which,
     // page the user is on.
-    if (buttonClicked.includes('to-swap')) {
+    if (buttonClicked.includes('to-swap')) {      
       swapTokenButton.appendChild(textContainer)
-      Array.from(fromSwapBtn).map(btn => {
-        btn.className = 'col-6 col-md-5 from-swap-btn'
-      })
+      toSwapBtn.className = 'col-6 from-swap-btn'
 
       // Make the button smaller.
       tokenButtonContainerSwap.classList.add('col-6')
+    } else if (buttonClicked.includes('from-second-swap')) {
+      // Check if the node/element already has the textContainer.
+      if (swapSecondTokenButton.children.length < 1) {
+        swapSecondTokenButton.appendChild(textContainer)
+      }
+      fromSwapBtn.className = 'col-6 from-swap-btn'
+      // Make the button smaller.
+      tokenSecondContainerSwap.classList.add('col-6')
     } else if (buttonClicked.includes('to-purchase')) {
       purchaseTokenButton.appendChild(textContainer)
       fromPurchaseBtn.className = 'col-6 col-md-5 from-purchase-btn'
@@ -158,8 +174,10 @@ const setSecondTokenButton = (imageUrl, titleText, imgClassName, titleClassName)
 // Set the chosen token to the page.
 const setTokens = (evt) => {
     let swapFromImg = document.querySelector('.from-swap-image')
+    let toSecondImg = document.querySelector('.to-second-image')
     let purchaseFromImg = document.querySelector('.from-purchase-image')
     let swapFromTitle = document.querySelector('.from-swap-title')
+    let toSecondTitle = document.querySelector('.to-second-title')
     let purchaseFromTitle = document.querySelector('.from-purchase-title')
     let selectedTitle = evt.currentTarget.firstChild.title
 
@@ -171,6 +189,11 @@ const setTokens = (evt) => {
           if(token.title === selectedTitle) {
             if (buttonClicked.includes('to-swap')) {
               setSecondTokenButton(token.imageUrl, token.title, 'to-swap-image', 'to-swap-title')
+            } else if (buttonClicked.includes('from-second-swap') || buttonClicked.includes('from-swap-icon')) {
+              setSecondTokenButton(token.imageUrl, token.title, 'from-swap-second-image', 'from-swap-second-title')
+            } else if (buttonClicked.includes('to-ETH')) {
+              toSecondImg.src = token.imageUrl
+              toSecondTitle.innerHTML = selectedTitle
             } else {
               swapFromImg.src = token.imageUrl
               swapFromTitle.innerHTML = selectedTitle
@@ -240,6 +263,8 @@ function toggleTabs(evt, cityName) {
       let inputTitles = document.querySelectorAll('.input-title')
       let inputs = document.querySelectorAll('.token-amount-input')
       let swapPurchaseButtons = document.querySelectorAll('.ETH')
+      let swapSecondButtons = document.querySelectorAll('.from-ETH')
+      let swapToButtons = document.querySelectorAll('.to-ETH')
       let tokenTitle = document.querySelectorAll('.eth-title')
       let tokenIcon = document.querySelectorAll('.eth-icon')
       let settingIcon = document.querySelector('.fa-cog')
@@ -291,6 +316,8 @@ function toggleTabs(evt, cityName) {
       toggleNodeListClasses(inputs, 'dark-mode-input')
       toggleNodeListClasses(formFields, 'dark-mode-form-field')
       toggleNodeListClasses(swapPurchaseButtons, 'dark-mode-swap-purchase-button')
+      toggleNodeListClasses(swapSecondButtons, 'dark-mode-swap-purchase-button')
+      toggleNodeListClasses(swapToButtons, 'dark-mode-swap-purchase-button')
       toggleNodeListClasses(tokenTitle, 'dark-mode-token-title')
       toggleNodeListClasses(tokenIcon, 'dark-mode-token-icon')
       toggleNodeListClasses(connectWalletBtns, 'dark-mode-connectbtn')
@@ -359,8 +386,84 @@ function toggleTabs(evt, cityName) {
     }
   }
 
-  // const startUp = () => {
-  // }
+  const startUp = (evt) => {
+    evt.stopPropagation()
+      // Popup form is visible.
+      popUpFormVisible = true;
+      hideForms('.pop-up-form23')
+      if (lightMode) {
+        $("body").addClass("intro");
+      } else {
+        $("body").addClass("dark-mode-intro")
+      }
+      // Reduce the opacity of all other elements and disable them.
+      addOverlay('open')
+      // Hide the bottom so that the page does not scroll on mobile screens,
+      // while the popup is visible.
+      $(".bottom").hide();
+      // Show the elements that we're hiding when showing the,
+      // connect wallet popup
+      $(".Search-form").show();
+      $(".second-search-field").show();
+      $(".token-listing").show();
+      $(".footer-manage").show();
+      let popUpForm = document.querySelector('.pop-up-form23')
+      // Remove the styling that positions the popup form a bit lower.
+      popUpForm.classList.remove('connect-wallet-styling')
+      let popUpFormTitle = document.querySelector('.pop-up-form-title')
+      popUpFormTitle.innerHTML = 'Select a token'
+      const currentButtonClicked = evt.currentTarget.className
+      buttonClicked = currentButtonClicked;
+
+      $(".pop-up-form23").show();
+
+      // First check whether the token list had already been rendered.
+      let ethTitle = document.querySelector('.token-title')
+      if (ethTitle && !lightMode) {
+        addDarkMode()
+      } else {
+        loadTokens()
+      }
+      $(".select-otion").click(function (evt) {
+        evt.stopPropagation()
+        $(".pop-up-form23").hide();
+        $(".bottom").show();
+        popUpFormVisible = false
+        // Return elments to original opacity
+        addOverlay('close')
+        // Decide which button to show depending on which page,
+        // the user is on.
+        if (buttonClicked.includes('to-purchase')) {
+          $('.token-button-container-purchase').show();
+        } else if (buttonClicked.includes('from-second-swap')) {
+          $('.token-second-container-swap').show();  
+        } else if (buttonClicked.includes('to-swap')) {
+          $('.token-button-container-swap').show();  
+        } else if (buttonClicked.includes('to-contract-btn')) {
+          $('.token-button-container-swap-2').show();  
+        }
+        if (lightMode) {
+          $("body").removeClass("intro");
+        } else {
+          removeDarkMode()
+          $("body").removeClass("dark-mode-intro")
+        }
+        setTokens(evt)
+      });
+  }
+
+  let fromSelectButton = document.querySelector('.from-select-token')
+  let fromETHButton = document.querySelector('.from-ETH')
+  let toETHButton = document.querySelector('.to-ETH')
+  fromSelectButton.addEventListener('click', (e) => {
+      startUp(e)
+  })
+  fromETHButton.addEventListener('click', (e) => {
+    startUp(e)
+  })
+  toETHButton.addEventListener('click', (e) => {
+    startUp(e)
+  })
 
   
 // Get the element with id="defaultOpen" and click on it
@@ -391,6 +494,7 @@ $(function () {
     $(".pop-up-form33").hide();
     $(".pop-up-form34").hide();
     $('.token-button-container-swap').hide();  
+    $('.token-second-container-swap').hide();  
     $('.token-button-container-purchase').hide();  
     $('.dark').hide();  
 
@@ -413,67 +517,7 @@ $(function () {
     })
 
     $(".ETH, .select-token").click(function (buttonEvt) {
-      buttonEvt.stopPropagation()
-      // Popup form is visible.
-      popUpFormVisible = true;
-      hideForms('.pop-up-form23')
-      if (lightMode) {
-        $("body").addClass("intro");
-      } else {
-        $("body").addClass("dark-mode-intro")
-      }
-      // Reduce the opacity of all other elements and disable them.
-      addOverlay('open')
-      // Hide the bottom so that the page does not scroll on mobile screens,
-      // while the popup is visible.
-      $(".bottom").hide();
-      // Show the elements that we're hiding when showing the,
-      // connect wallet popup
-      $(".Search-form").show();
-      $(".second-search-field").show();
-      $(".token-listing").show();
-      $(".footer-manage").show();
-      let popUpForm = document.querySelector('.pop-up-form23')
-      // Remove the styling that positions the popup form a bit lower.
-      popUpForm.classList.remove('connect-wallet-styling')
-      let popUpFormTitle = document.querySelector('.pop-up-form-title')
-      popUpFormTitle.innerHTML = 'Select a token'
-      const currentButtonClicked = buttonEvt.currentTarget.className
-      buttonClicked = currentButtonClicked;
-
-      $(".pop-up-form23").show();
-
-      // First check whether the token list had already been rendered.
-      let ethTitle = document.querySelector('.token-title')
-      if (ethTitle && !lightMode) {
-        addDarkMode()
-      } else {
-        loadTokens()
-      }
-      $(".select-otion").click(function (evt) {
-        evt.stopPropagation()
-        $(".pop-up-form23").hide();
-        $(".bottom").show();
-        popUpFormVisible = false
-        // Return elments to original opacity
-        addOverlay('close')
-        // Decide which button to show depending on which page,
-        // the user is on.
-        if (buttonClicked.includes('to-purchase')) {
-          $('.token-button-container-purchase').show();
-        } else if (buttonClicked.includes('to-swap')) {
-          $('.token-button-container-swap').show();  
-        } else if (buttonClicked.includes('to-contract-btn')) {
-          $('.token-button-container-swap-2').show();  
-        }
-        if (lightMode) {
-          $("body").removeClass("intro");
-        } else {
-          removeDarkMode()
-          $("body").removeClass("dark-mode-intro")
-        }
-        setTokens(evt)
-      });
+      startUp(buttonEvt)
     });
 
     $(".close-icon").click(function () {

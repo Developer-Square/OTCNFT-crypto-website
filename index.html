@@ -97,11 +97,11 @@
       <div class="form-field">
         <div class="form-title">
           <h3 id="form-title"><b>Swap</b></h3>
-          <h3 class="input-title">Buyer's Address</h3>
+          <h3 class="input-title">Your Address</h3>
         </div>
         <div class="price-title">
           <div class="row">
-            <div class="col-5">
+            <div class="col-6">
               <input class="token-amount-input" inputmode="decimal" title="Token Amount" autocomplete="off"
                 autocorrect="off" type="text" pattern="^[0-9]*[.,]?[0-9]*$" placeholder="0.0" minlength="1"
                 maxlength="79" spellcheck="false" value="">
@@ -115,13 +115,26 @@
         </div>
         <div class="price-title mt-3">
           <div class="row">
-            <div class="col-7 from-swap-btn">
+            <div class="col-5 from-swap-btn">
               <button class="ETH from-swap">
                 <span class="ETH-span">
                   <img src="./images/download.png" class="from-swap-image">
                   <span class="eth-title from-swap-title">ETH</span>
                   <span class="eth-icon"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
                 </span>
+              </button>
+            </div>
+            
+            <div class="col-6 col-md-5 token-second-container-swap">
+              <button class="from-ETH from-swap-icon">
+                <!-- The Dynamic token content will be placed here -->
+              </button>
+            </div>
+
+            <div class="col-7 select-token-second-swap">
+              <button class="from-select-token from-second-swap">
+                <span class="token-span">Select a token</span>
+                <span class="token-icon"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
               </button>
             </div>
           </div>
@@ -139,20 +152,32 @@
         </div>
         <div class="price-title">
           <div class="row">
-            <div class="col-5 to-input-swap">
+            <div class="col-6 to-input-swap">
               <input class="token-amount-input" inputmode="decimal" title="Token Amount" autocomplete="off"
                 autocorrect="off" type="text" pattern="^[0-9]*[.,]?[0-9]*$" placeholder="0.0" minlength="1"
                 maxlength="79" spellcheck="false" value="">
             </div>
           </div>
         </div>
+        
         <!-- Extra Fields -->
-        <div class="form-title mt-3">
+        <div class="form-title title-2 mt-3">
           <h3 class="input-title">Contract Address</h3>
         </div>
+
         <div class="price-title mt-3">
           <div class="row">
-            <div class="col-md-5 token-button-container-swap">
+            <div class="col-5 to-swap-btn">
+              <button class="to-ETH to-second-swap">
+                <span class="ETH-span">
+                  <img src="./images/download.png" class="to-second-image">
+                  <span class="eth-title to-second-title">ETH</span>
+                  <span class="eth-icon"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                </span>
+              </button>
+            </div>
+
+            <div class="col-6 col-md-5 token-button-container-swap">
               <button class="ETH to-swap-icon">
                 <!-- The Dynamic token content will be placed here -->
               </button>
@@ -196,7 +221,7 @@
         </div>
         <div class="price-title mt-3">
           <div class="row">
-            <div class="col-7 from-purchase-btn">
+            <div class="col-12 from-purchase-btn">
               <button class="ETH purchase">
                 <span class="ETH-span">
                   <img src="./images/download.png" class="from-purchase-image">
@@ -239,7 +264,7 @@
               </button>
             </div>
 
-            <div class="col-7 select-token-container-purchase">
+            <div class="col-12 select-token-container-purchase">
               <button class="select-token to-purchase">
                 <span class="token-span">Select a token</span>
                 <span class="token-icon"><i class="fa fa-angle-down" aria-hidden="true"></i></span>

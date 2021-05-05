@@ -118,7 +118,7 @@ span.ETH-span img {
     box-shadow: rgb(0 0 0 / 8%) 0px 6px 10px;
     border-radius: 24px;
 }
-button.ETH {
+button.ETH, button.from-ETH, button.to-ETH {
     border: none;
     background: #fff;
 }
@@ -132,7 +132,7 @@ span.eth-icon {
     font-size: 20px;
     margin: 0px 8px;
 }
-button.select-token {
+button.select-token, button.from-select-token {
     background-color: rgb(38 136 255);
     border: none;
     border-radius: 12px;
@@ -305,7 +305,7 @@ nav a#pull {
   outline: 0;
 }
 
-.connect-wallet-appbar:focus, .connect-wallet-appbar:active:focus, .connect-wallet-appbar:hover, .theme-toggle-button:focus, .ETH:focus {
+.connect-wallet-appbar:focus, .connect-wallet-appbar:active:focus, .connect-wallet-appbar:hover, .theme-toggle-button:focus, .ETH:focus, .from-ETH:focus, .to-ETH:focus {
   outline: 0;
   color: var(--button-color);
 }
@@ -328,7 +328,7 @@ nav a#pull {
   align-items: center;
 }
 
-.theme-toggle-button:focus, svg:focus,.select-token:focus, .token-span:focus, .eth-title:focus {
+.theme-toggle-button:focus, svg:focus,.select-token:focus,.from-select-token:focus, .token-span:focus, .eth-title:focus {
   outline: none !important;
 }
 
@@ -360,6 +360,11 @@ nav a#pull {
   border-radius: 16px;
   color: var(--primary-color);
   text-align: center;
+}
+
+.to-swap, .to-swap-icon, .purchase, .to-purchase-icon, .to-purchase {
+  display: block;
+  margin-left: auto !important;
 }
 
 /* The fixed mobile footer that appears on mobile screens */
@@ -483,7 +488,7 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
     font-size: 1.8rem;
   }
   
-  button.select-token {
+  button.select-token, button.from-select-token {
       padding: 8px 8px;
   }
   
@@ -568,7 +573,7 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
     padding: 13px;
   }
   
-  button.select-token {
+  button.select-token, button.from-select-token {
       padding: 8px 10px;
   }
 
@@ -627,6 +632,10 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
     right: 15px;
     top: 10px;
   }
+
+  .select-token-second-swap {
+    padding-right: 10px;
+  }
 }
 
 @media all and (min-width: 576px) {
@@ -646,11 +655,8 @@ span.dark-mode-token-icon, span.dark-mode-token-title, i.dark-mode-setting-icon 
     font-size: 22px;
   }
 
-  button.select-token {
+  button.select-token, button.from-select-token {
     padding: 8px 13px;
-  }
-
-  .select-token {
     margin-left: 0;
   }
 
