@@ -6,6 +6,7 @@ let popUpFormVisible = false;
 let navbar = document.querySelector('.navbar')
 let navbarBrand = document.querySelector('.navbar-brand')
 let connectWalletBtnAppBar = document.querySelectorAll('.connect-wallet-appbar')
+let connectBtn = document.querySelector('.connect-btn')
 let navbarLinks = document.querySelectorAll('.nav-link')
 let themeButton = document.querySelectorAll('.theme-toggle-button')
 let mobileFooter = document.querySelector('.mobile-footer')
@@ -371,6 +372,7 @@ function toggleTabs(evt, cityName) {
     if (action === 'open') {
       navbar.classList.add('dark-mode-opacity')
       navbarBrand.setAttribute('disabled', true)
+      connectBtn.setAttribute('disabled', true)
       toggleNodeListAttributes(connectWalletBtnAppBar, 'disabled', true)
       mobileFooter.style.display = 'none'
 
@@ -379,6 +381,7 @@ function toggleTabs(evt, cityName) {
     } else if (action === 'close') {
       navbar.classList.remove('dark-mode-opacity')
       navbarBrand.removeAttribute('disabled')
+      connectBtn.removeAttribute('disabled')
       toggleNodeListAttributes(connectWalletBtnAppBar, 'disabled', false)
       toggleNodeListAttributes(navbarLinks, 'disabled', false)
       toggleNodeListAttributes(themeButton, 'disabled', false)
